@@ -57,10 +57,13 @@ NOTES POUR LE FOURNISSEUR
 - Fichiers SVG vectoriels : ouvrir dans Illustrator, convertir textes en courbes,
   enregistrer en .ai
 - Convertir couleurs en CMYK avant impression
+- IMPORTANT - LOGO : Le texte "EverHaar / HAIR CARE" dans les fichiers est un
+  placeholder de positionnement. Remplacer par le fichier logo vectoriel officiel
+  de la marque (fourni separement). Centrer au meme emplacement.
 - Le volet 2 du guide contient un placeholder [PLACER PHOTO ICI] :
   remplacer par la photo produit fournie separement
 - Les icones dans les cercles sont des caracteres Unicode :
   le fournisseur peut les remplacer par des icones vectorielles custom
   (voir images de reference fournies)
-- Polices utilisees : Helvetica Neue (ou Arial), style serif pour le logo EverHaar
+- Polices utilisees : Helvetica Neue (ou Arial) pour le corps de texte
   → Convertir en courbes/outlines avant impression

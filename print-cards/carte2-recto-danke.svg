@@ -7,12 +7,15 @@
     CARTE 2 - RECTO : Danke / Thank You
     Format final : 148 x 105 mm (A6 paysage)
     Fond perdu : 3mm de chaque cote
+
+    NOTE FOURNISSEUR : Remplacer le texte "EverHaar" et "HAIR CARE"
+    par le fichier logo vectoriel officiel de la marque.
   -->
 
   <!-- Fond noir avec fond perdu -->
   <rect x="0" y="0" width="154" height="111" fill="#000000"/>
 
-  <!-- Traits de coupe -->
+  <!-- Reperes de coupe -->
   <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
     <line x1="3" y1="0" x2="3" y2="1.5"/>
     <line x1="3" y1="109.5" x2="3" y2="111"/>
@@ -24,33 +27,32 @@
     <line x1="152.5" y1="108" x2="154" y2="108"/>
   </g>
 
-  <!-- Logo "EverHaar" en haut -->
-  <text x="77" y="28"
-        font-family="'Didot', 'Bodoni MT', 'GFS Didot', 'Playfair Display', 'Times New Roman', serif"
-        font-size="16"
-        font-weight="400"
-        fill="#FFFFFF"
-        text-anchor="middle"
-        letter-spacing="0.8">EverHaar</text>
-
-  <!-- Sous-titre "HAIR CARE" -->
-  <text x="77" y="35"
-        font-family="'Helvetica Neue', 'Arial', 'Futura', sans-serif"
-        font-size="4"
+  <!-- LOGO EVERHAAR - Haut de la carte -->
+  <text x="77" y="30"
+        font-family="'Didot', 'Bodoni MT', 'Bodoni 72', 'GFS Didot', 'Cormorant Garamond', 'Playfair Display', serif"
+        font-size="18"
         font-weight="300"
         fill="#FFFFFF"
         text-anchor="middle"
-        letter-spacing="3.5">HAIR CARE</text>
+        letter-spacing="0.5">EverHaar</text>
+
+  <text x="77" y="37"
+        font-family="'Helvetica Neue', 'Futura', 'Arial', sans-serif"
+        font-size="3.5"
+        font-weight="300"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="4.5">HAIR CARE</text>
 
   <!-- Texte principal "Danke, dass Sie sich..." -->
-  <text x="77" y="55"
+  <text x="77" y="56"
         font-family="'Helvetica Neue', 'Arial', sans-serif"
         font-size="8.5"
         font-weight="800"
         font-style="italic"
         fill="#FFFFFF"
         text-anchor="middle">Danke, dass Sie sich f&#252;r</text>
-  <text x="77" y="66"
+  <text x="77" y="67"
         font-family="'Helvetica Neue', 'Arial', sans-serif"
         font-size="8.5"
         font-weight="800"
@@ -59,16 +61,16 @@
         text-anchor="middle">Everhaar entschieden haben.</text>
 
   <!-- Sous-texte italique -->
-  <text x="77" y="80"
+  <text x="77" y="81"
         font-family="'Helvetica Neue', 'Arial', sans-serif"
-        font-size="5"
+        font-size="4.8"
         font-weight="400"
         font-style="italic"
         fill="#FFFFFF"
         text-anchor="middle">Ihre Unterst&#252;tzung bedeutet uns viel, sch&#246;n,</text>
-  <text x="77" y="87"
+  <text x="77" y="88"
         font-family="'Helvetica Neue', 'Arial', sans-serif"
-        font-size="5"
+        font-size="4.8"
         font-weight="400"
         font-style="italic"
         fill="#FFFFFF"
