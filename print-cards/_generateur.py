@@ -83,6 +83,41 @@ def fit_size(text, weight, target_width, tracking=0.0):
     return target_width / per_em
 
 
+def fit_tracking(text, weight, size, target_width):
+    """Calcule l'interlettrage (en em) pour qu'un texte a `size` fasse target_width."""
+    natural = measure(text, weight, 0.0) * size
+    gaps = max(len(text) - 1, 1)
+    return (target_width - natural) / (gaps * size)
+
+
+def runs_to_paths(runs, size, x, y, tracking=0.0, anchor="start", fill="#FFFFFF"):
+    """
+    Enchaine plusieurs fragments de graisses differentes sur une meme ligne.
+    runs = [(texte, graisse), ...]
+    """
+    total = 0.0
+    for i, (t, w) in enumerate(runs):
+        total += measure(t, w, tracking) * size
+        if i < len(runs) - 1:
+            total += tracking * size
+
+    if anchor == "middle":
+        cursor = x - total / 2.0
+    elif anchor == "end":
+        cursor = x - total
+    else:
+        cursor = x
+
+    out = []
+    for i, (t, w) in enumerate(runs):
+        out.append(text_to_paths(t, w, size, cursor, y,
+                                 tracking=tracking, anchor="start", fill=fill))
+        cursor += measure(t, w, tracking) * size
+        if i < len(runs) - 1:
+            cursor += tracking * size
+    return "\n    ".join(p for p in out if p)
+
+
 # ============================================================
 #  GEOMETRIE
 #  Carte finale 148 x 105 mm + 3 mm de fond perdu = 154 x 111 mm
@@ -218,10 +253,90 @@ def carte2_verso():
                    "CARTE 2 - VERSO : -20 % code DANKE20")
 
 
+# ============================================================
+#  CARTE 1
+#  Visuels d'origine : 1600 x 1128 px
+# ============================================================
+PX1 = 105.0 / 1128.0
+
+def mx1(v):
+    return BLEED + v * PX1
+
+def my1(v):
+    return BLEED + v * PX1
+
+
+def carte1_recto():
+    """Face logo : EverHaar centre."""
+    el = []
+    # EverHaar : largeur 990 px, ligne de base 632 px
+    s = fit_size("EverHaar", 300, 990 * PX1)
+    el.append(text_to_paths("EverHaar", 300, s, CX, my1(632), anchor="middle"))
+
+    # HAIR CARE : largeur 325 px, ligne de base 690 px
+    tr = 0.30
+    s = fit_size("HAIR CARE", 500, 325 * PX1, tracking=tr)
+    el.append(text_to_paths("HAIR CARE", 500, s, CX, my1(690), tracking=tr, anchor="middle"))
+
+    return svg_doc("EverHaar - Carte 1 recto - Logo",
+                   "\n  ".join(el),
+                   "CARTE 1 - RECTO : Logo EverHaar")
+
+
+def carte1_verso():
+    """Face testimonial : tout aligne a gauche."""
+    el = []
+    L = mx1(72)          # marge gauche commune
+
+    # ---- titre ----
+    t = "ERHALTE EINE GRATIS-FLASCHE!"
+    s_title = fit_size(t, 800, 1313 * PX1)
+    el.append(text_to_paths(t, 800, s_title, L, my1(178), anchor="start"))
+
+    # ---- corps : corps fixe, interlettrage calcule sur la ligne la plus longue ----
+    b_size = (30 / 0.70) * PX1          # hauteur de capitale relevee : 30 px
+    l1 = "Sende uns ein echtes Video-Testimonial, in dem"
+    b_tr = fit_tracking(l1, 300, b_size, 1378 * PX1)
+
+    el.append(text_to_paths(l1, 300, b_size, L, my1(355), tracking=b_tr, anchor="start"))
+    el.append(text_to_paths("du unser Produkt verwendest,", 300, b_size, L, my1(412),
+                            tracking=b_tr, anchor="start"))
+    el.append(text_to_paths("und wir schicken dir eine weitere Flasche deiner", 300, b_size,
+                            L, my1(470), tracking=b_tr, anchor="start"))
+    el.append(runs_to_paths([("Wahl ", 300), ("KOSTENLOS!", 700)], b_size, L, my1(527),
+                            tracking=b_tr, anchor="start"))
+
+    # ---- ligne email ----
+    el.append(runs_to_paths([("Sende dein Video an: ", 300),
+                             ("support@everhaarcare.com", 700)],
+                            b_size, L, my1(645), tracking=b_tr, anchor="start"))
+
+    # ---- Anforderungen ----
+    el.append(text_to_paths("Anforderungen:", 700, b_size, L, my1(755),
+                            tracking=b_tr, anchor="start"))
+
+    # ---- puces ----
+    bullets = [("Muss ein Video sein", 868),
+               ("Zeige das Vorher und Nachher", 927),
+               ("Mindestens 15 Sekunden lang", 985)]
+    dot_x, txt_x = mx1(108), mx1(150)
+    for txt, ypx in bullets:
+        el.append(f'<circle cx="{dot_x:.3f}" cy="{my1(ypx) - b_size*0.29:.3f}" '
+                  f'r="{b_size*0.115:.3f}" fill="#FFFFFF"/>')
+        el.append(text_to_paths(txt, 300, b_size, txt_x, my1(ypx),
+                                tracking=b_tr, anchor="start"))
+
+    return svg_doc("EverHaar - Carte 1 verso - Gratis-Flasche",
+                   "\n  ".join(el),
+                   "CARTE 1 - VERSO : Video testimonial / bouteille offerte")
+
+
 if __name__ == "__main__":
     out = "/home/user/macbook/print-cards"
     os.makedirs(out, exist_ok=True)
-    jobs = [("carte2-recto-danke.svg", carte2_recto()),
+    jobs = [("carte1-recto-logo.svg", carte1_recto()),
+            ("carte1-verso-testimonial.svg", carte1_verso()),
+            ("carte2-recto-danke.svg", carte2_recto()),
             ("carte2-verso-discount.svg", carte2_verso())]
     for name, content in jobs:
         p = os.path.join(out, name)

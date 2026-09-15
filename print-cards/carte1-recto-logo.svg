@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="154mm" height="111mm"
-     viewBox="0 0 154 111"
-     version="1.1">
+     width="154.0mm" height="111.0mm"
+     viewBox="0 0 154.0 111.0" version="1.1">
+  <title>EverHaar - Carte 1 recto - Logo</title>
   <!--
     CARTE 1 - RECTO : Logo EverHaar
-    Format final : 148 x 105 mm (A6 paysage)
-    Fond perdu : 3mm de chaque cote
-
-    NOTE FOURNISSEUR : Remplacer le texte "EverHaar" et "HAIR CARE"
-    par le fichier logo vectoriel officiel de la marque.
-    Le texte ci-dessous sert de positionnement/reference.
+    Format final   : 148 x 105 mm (A6 paysage)
+    Fond perdu     : 3 mm par cote
+    Fichier total  : 154 x 111 mm
+    Texte converti en courbes vectorielles - aucune police requise.
   -->
-
-  <!-- Fond noir avec fond perdu -->
-  <rect x="0" y="0" width="154" height="111" fill="#000000"/>
-
-  <!-- Reperes de coupe -->
-  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
-    <line x1="3" y1="0" x2="3" y2="1.5"/>
-    <line x1="3" y1="109.5" x2="3" y2="111"/>
-    <line x1="151" y1="0" x2="151" y2="1.5"/>
-    <line x1="151" y1="109.5" x2="151" y2="111"/>
-    <line x1="0" y1="3" x2="1.5" y2="3"/>
-    <line x1="152.5" y1="3" x2="154" y2="3"/>
-    <line x1="0" y1="108" x2="1.5" y2="108"/>
-    <line x1="152.5" y1="108" x2="154" y2="108"/>
-  </g>
-
-  <!-- LOGO EVERHAAR - Centre de la carte -->
-  <!-- Police : fine, elegante, type Didot/Bodoni thin -->
-  <!-- Le "E" et "H" majuscules, "ver" et "aar" en minuscules -->
-  <text x="77" y="50"
-        font-family="'Didot', 'Bodoni MT', 'Bodoni 72', 'GFS Didot', 'Cormorant Garamond', 'Playfair Display', serif"
-        font-size="26"
-        font-weight="300"
-        fill="#FFFFFF"
-        text-anchor="middle"
-        letter-spacing="0.5">EverHaar</text>
-
-  <!-- Sous-titre "HAIR CARE" - espacement large, poids light -->
-  <text x="77" y="59"
-        font-family="'Helvetica Neue', 'Futura', 'Arial', sans-serif"
-        font-size="4.5"
-        font-weight="300"
-        fill="#FFFFFF"
-        text-anchor="middle"
-        letter-spacing="5">HAIR CARE</text>
-
+  <rect x="0" y="0" width="154.0" height="111.0" fill="#000000"/>
+  <line x1="3.0" y1="0" x2="3.0" y2="1.6" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="151.0" y1="0" x2="151.0" y2="1.6" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="3.0" y1="109.4" x2="3.0" y2="111.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="151.0" y1="109.4" x2="151.0" y2="111.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="0" y1="3.0" x2="1.6" y2="3.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="0" y1="108.0" x2="1.6" y2="108.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="152.4" y1="3.0" x2="154.0" y2="3.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <line x1="152.4" y1="108.0" x2="154.0" y2="108.0" stroke="#FFFFFF" stroke-width="0.15" opacity="0.55" fill="none"/>
+  <g transform="translate(30.9229,61.8298) scale(0.020826,-0.020826)"><path d="M150 642V381H415V323H150V58H445V0H80V700H445V642Z" fill="#FFFFFF"/></g>
+    <g transform="translate(41.3983,61.8298) scale(0.020826,-0.020826)"><path d="M274 68 458 546H532L313 0H234L15 546H90Z" fill="#FFFFFF"/></g>
+    <g transform="translate(52.7900,61.8298) scale(0.020826,-0.020826)"><path d="M572 246H119Q122 184 149.0 140.0Q176 96 220.0 73.5Q264 51 316 51Q384 51 430.5 84.0Q477 117 492 173H566Q546 93 480.5 42.5Q415 -8 316 -8Q239 -8 178.0 26.5Q117 61 82.5 124.5Q48 188 48 273Q48 358 82.0 422.0Q116 486 177.0 520.0Q238 554 316 554Q394 554 452.5 520.0Q511 486 542.5 428.5Q574 371 574 301Q574 265 572 246ZM313 494Q235 494 180.0 444.0Q125 394 119 303H503Q504 364 478.5 407.0Q453 450 409.0 472.0Q365 494 313 494Z" fill="#FFFFFF"/></g>
+    <g transform="translate(65.7436,61.8298) scale(0.020826,-0.020826)"><path d="M337 556V483H318Q242 483 196.0 442.0Q150 401 150 305V0H80V546H150V449Q173 500 220.5 528.0Q268 556 337 556Z" fill="#FFFFFF"/></g>
+    <g transform="translate(73.2826,61.8298) scale(0.020826,-0.020826)"><path d="M599 699V0H529V327H150V0H80V699H150V385H529V699Z" fill="#FFFFFF"/></g>
+    <g transform="translate(87.4233,61.8298) scale(0.020826,-0.020826)"><path d="M309 554Q387 554 443.5 518.0Q500 482 525 426V546H595V0H525V121Q499 65 442.5 28.5Q386 -8 308 -8Q234 -8 174.5 27.0Q115 62 81.5 126.0Q48 190 48 274Q48 358 81.5 421.5Q115 485 174.5 519.5Q234 554 309 554ZM322 493Q264 493 218.0 467.0Q172 441 145.5 391.5Q119 342 119 274Q119 207 145.5 156.5Q172 106 218.0 79.5Q264 53 322 53Q378 53 424.5 80.0Q471 107 498.0 157.0Q525 207 525 273Q525 339 498.0 389.0Q471 439 424.5 466.0Q378 493 322 493Z" fill="#FFFFFF"/></g>
+    <g transform="translate(101.4808,61.8298) scale(0.020826,-0.020826)"><path d="M309 554Q387 554 443.5 518.0Q500 482 525 426V546H595V0H525V121Q499 65 442.5 28.5Q386 -8 308 -8Q234 -8 174.5 27.0Q115 62 81.5 126.0Q48 190 48 274Q48 358 81.5 421.5Q115 485 174.5 519.5Q234 554 309 554ZM322 493Q264 493 218.0 467.0Q172 441 145.5 391.5Q119 342 119 274Q119 207 145.5 156.5Q172 106 218.0 79.5Q264 53 322 53Q378 53 424.5 80.0Q471 107 498.0 157.0Q525 207 525 273Q525 339 498.0 389.0Q471 439 424.5 466.0Q378 493 322 493Z" fill="#FFFFFF"/></g>
+    <g transform="translate(115.5382,61.8298) scale(0.020826,-0.020826)"><path d="M337 556V483H318Q242 483 196.0 442.0Q150 401 150 305V0H80V546H150V449Q173 500 220.5 528.0Q268 556 337 556Z" fill="#FFFFFF"/></g>
+  <g transform="translate(61.8737,67.2287) scale(0.003989,-0.003989)"><path d="M630 695V0H516V304H189V0H75V695H189V397H516V695Z" fill="#FFFFFF"/></g>
+    <g transform="translate(65.8826,67.2287) scale(0.003989,-0.003989)"><path d="M494 142H203L153 0H34L283 696H415L664 0H544ZM462 235 349 558 235 235Z" fill="#FFFFFF"/></g>
+    <g transform="translate(69.8597,67.2287) scale(0.003989,-0.003989)"><path d="M189 695V0H75V695Z" fill="#FFFFFF"/></g>
+    <g transform="translate(72.1095,67.2287) scale(0.003989,-0.003989)"><path d="M436 0 276 278H189V0H75V695H315Q395 695 450.5 667.0Q506 639 533.5 592.0Q561 545 561 487Q561 419 521.5 363.5Q482 308 400 288L572 0ZM189 369H315Q379 369 411.5 401.0Q444 433 444 487Q444 541 412.0 571.5Q380 602 315 602H189Z" fill="#FFFFFF"/></g>
+    <g transform="translate(78.0611,67.2287) scale(0.003989,-0.003989)"><path d="M392 704Q503 704 589.5 649.5Q676 595 715 495H578Q551 550 503.0 577.0Q455 604 392 604Q323 604 269.0 573.0Q215 542 184.5 484.0Q154 426 154 349Q154 272 184.5 214.0Q215 156 269.0 124.5Q323 93 392 93Q455 93 503.0 120.0Q551 147 578 202H715Q676 102 589.5 48.0Q503 -6 392 -6Q294 -6 213.0 39.5Q132 85 84.5 166.0Q37 247 37 349Q37 451 84.5 532.0Q132 613 213.5 658.5Q295 704 392 704Z" fill="#FFFFFF"/></g>
+    <g transform="translate(82.3413,67.2287) scale(0.003989,-0.003989)"><path d="M494 142H203L153 0H34L283 696H415L664 0H544ZM462 235 349 558 235 235Z" fill="#FFFFFF"/></g>
+    <g transform="translate(86.3183,67.2287) scale(0.003989,-0.003989)"><path d="M436 0 276 278H189V0H75V695H315Q395 695 450.5 667.0Q506 639 533.5 592.0Q561 545 561 487Q561 419 521.5 363.5Q482 308 400 288L572 0ZM189 369H315Q379 369 411.5 401.0Q444 433 444 487Q444 541 412.0 571.5Q380 602 315 602H189Z" fill="#FFFFFF"/></g>
+    <g transform="translate(90.0361,67.2287) scale(0.003989,-0.003989)"><path d="M189 603V399H429V306H189V93H459V0H75V696H459V603Z" fill="#FFFFFF"/></g>
 </svg>
