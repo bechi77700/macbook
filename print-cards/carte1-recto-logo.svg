@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="154mm" height="111mm"
+     viewBox="0 0 154 111"
+     version="1.1">
+  <!--
+    CARTE 1 - RECTO : Logo EverHaar
+    Format final : 148 x 105 mm (A6 paysage)
+    Fond perdu : 3mm de chaque cote
+    Zone de securite : 5mm du bord de coupe
+    Trait de coupe a 3mm du bord du fichier
+  -->
+
+  <!-- Fond noir avec fond perdu -->
+  <rect x="0" y="0" width="154" height="111" fill="#000000"/>
+
+  <!-- Traits de coupe (crop marks) -->
+  <line x1="3" y1="0" x2="3" y2="2" stroke="#000000" stroke-width="0.1"/>
+  <line x1="3" y1="109" x2="3" y2="111" stroke="#000000" stroke-width="0.1"/>
+  <line x1="151" y1="0" x2="151" y2="2" stroke="#000000" stroke-width="0.1"/>
+  <line x1="151" y1="109" x2="151" y2="111" stroke="#000000" stroke-width="0.1"/>
+  <line x1="0" y1="3" x2="2" y2="3" stroke="#000000" stroke-width="0.1"/>
+  <line x1="152" y1="3" x2="154" y2="3" stroke="#000000" stroke-width="0.1"/>
+  <line x1="0" y1="108" x2="2" y2="108" stroke="#000000" stroke-width="0.1"/>
+  <line x1="152" y1="108" x2="154" y2="108" stroke="#000000" stroke-width="0.1"/>
+
+  <!-- Reperes de coupe en Registration (visible sur tous les calques) -->
+  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
+    <line x1="3" y1="0" x2="3" y2="1.5"/>
+    <line x1="3" y1="109.5" x2="3" y2="111"/>
+    <line x1="151" y1="0" x2="151" y2="1.5"/>
+    <line x1="151" y1="109.5" x2="151" y2="111"/>
+    <line x1="0" y1="3" x2="1.5" y2="3"/>
+    <line x1="152.5" y1="3" x2="154" y2="3"/>
+    <line x1="0" y1="108" x2="1.5" y2="108"/>
+    <line x1="152.5" y1="108" x2="154" y2="108"/>
+  </g>
+
+  <!-- Zone de contenu centree (centre du trim area = 77, 55.5) -->
+
+  <!-- Logo "EverHaar" - texte principal -->
+  <text x="77" y="48"
+        font-family="'Didot', 'Bodoni MT', 'GFS Didot', 'Playfair Display', 'Times New Roman', serif"
+        font-size="22"
+        font-weight="400"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="1">EverHaar</text>
+
+  <!-- Sous-titre "HAIR CARE" -->
+  <text x="77" y="58"
+        font-family="'Helvetica Neue', 'Arial', 'Futura', sans-serif"
+        font-size="5.5"
+        font-weight="300"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="4">HAIR CARE</text>
+
+</svg>

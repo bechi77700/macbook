@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="154mm" height="111mm"
+     viewBox="0 0 154 111"
+     version="1.1">
+  <!--
+    CARTE 2 - RECTO : Danke / Thank You
+    Format final : 148 x 105 mm (A6 paysage)
+    Fond perdu : 3mm de chaque cote
+  -->
+
+  <!-- Fond noir avec fond perdu -->
+  <rect x="0" y="0" width="154" height="111" fill="#000000"/>
+
+  <!-- Traits de coupe -->
+  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
+    <line x1="3" y1="0" x2="3" y2="1.5"/>
+    <line x1="3" y1="109.5" x2="3" y2="111"/>
+    <line x1="151" y1="0" x2="151" y2="1.5"/>
+    <line x1="151" y1="109.5" x2="151" y2="111"/>
+    <line x1="0" y1="3" x2="1.5" y2="3"/>
+    <line x1="152.5" y1="3" x2="154" y2="3"/>
+    <line x1="0" y1="108" x2="1.5" y2="108"/>
+    <line x1="152.5" y1="108" x2="154" y2="108"/>
+  </g>
+
+  <!-- Logo "EverHaar" en haut -->
+  <text x="77" y="28"
+        font-family="'Didot', 'Bodoni MT', 'GFS Didot', 'Playfair Display', 'Times New Roman', serif"
+        font-size="16"
+        font-weight="400"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="0.8">EverHaar</text>
+
+  <!-- Sous-titre "HAIR CARE" -->
+  <text x="77" y="35"
+        font-family="'Helvetica Neue', 'Arial', 'Futura', sans-serif"
+        font-size="4"
+        font-weight="300"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="3.5">HAIR CARE</text>
+
+  <!-- Texte principal "Danke, dass Sie sich..." -->
+  <text x="77" y="55"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="8.5"
+        font-weight="800"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">Danke, dass Sie sich f&#252;r</text>
+  <text x="77" y="66"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="8.5"
+        font-weight="800"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">Everhaar entschieden haben.</text>
+
+  <!-- Sous-texte italique -->
+  <text x="77" y="80"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="5"
+        font-weight="400"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">Ihre Unterst&#252;tzung bedeutet uns viel, sch&#246;n,</text>
+  <text x="77" y="87"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="5"
+        font-weight="400"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">dass Sie Teil unserer Community sind.</text>
+
+</svg>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="286mm" height="106mm"
+     viewBox="0 0 286 106"
+     version="1.1">
+  <!--
+    GUIDE UTILISATION SHAMPOOING - Depliant accordeon
+    Format final deplie : 280 x 100 mm (4 volets de 70 x 100 mm)
+    Fond perdu : 3mm de chaque cote
+    Fichier total : 286 x 106 mm
+
+    Volet 1 : NICHT VERWENDEN, WENN
+    Volet 2 : TIPPS ZUM FARBEN DER HAARE
+    Volet 3 : ANWENDUNG
+    Volet 4 : EMPFINDLICHKEITSTEST DER HAUT
+  -->
+
+  <defs>
+    <!-- Gradient de fond bleu-noir -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2030"/>
+      <stop offset="25%" stop-color="#1e2538"/>
+      <stop offset="50%" stop-color="#1a2030"/>
+      <stop offset="75%" stop-color="#1e2538"/>
+      <stop offset="100%" stop-color="#1a2535"/>
+    </linearGradient>
+
+    <!-- Cercle icone style -->
+    <clipPath id="roundClip">
+      <circle cx="0" cy="0" r="5"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fond avec fond perdu -->
+  <rect x="0" y="0" width="286" height="106" fill="url(#bgGrad)"/>
+
+  <!-- Traits de coupe -->
+  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.5">
+    <line x1="3" y1="0" x2="3" y2="1.5"/>
+    <line x1="3" y1="104.5" x2="3" y2="106"/>
+    <line x1="283" y1="0" x2="283" y2="1.5"/>
+    <line x1="283" y1="104.5" x2="283" y2="106"/>
+    <line x1="0" y1="3" x2="1.5" y2="3"/>
+    <line x1="284.5" y1="3" x2="286" y2="3"/>
+    <line x1="0" y1="103" x2="1.5" y2="103"/>
+    <line x1="284.5" y1="103" x2="286" y2="103"/>
+  </g>
+
+  <!-- Lignes de pliure (pointilles) -->
+  <g stroke="#FFFFFF" stroke-width="0.1" stroke-dasharray="1,1" opacity="0.3">
+    <line x1="73" y1="3" x2="73" y2="103"/>
+    <line x1="143" y1="3" x2="143" y2="103"/>
+    <line x1="213" y1="3" x2="213" y2="103"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- VOLET 1 : NICHT VERWENDEN, WENN (3 -> 73mm) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- Titre -->
+    <text x="38" y="15"
+          font-family="'Helvetica Neue', 'Arial', sans-serif"
+          font-size="4.5"
+          font-weight="800"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          letter-spacing="0.5">NICHT VERWENDEN, WENN</text>
+
+    <!-- Item 1 : Hauttest -->
+    <g transform="translate(13, 25)">
+      <circle cx="5" cy="5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="5" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x2622;</text>
+      <text x="14" y="4" font-family="'Helvetica Neue', sans-serif" font-size="3" fill="#d0d5dd" text-anchor="start">
+        <tspan x="14" dy="0">Der Hauttest R&#246;tungen,</tspan>
+        <tspan x="14" dy="4.2">Schwellungen oder Blasen</tspan>
+        <tspan x="14" dy="4.2">zeigt.</tspan>
+      </text>
+    </g>
+
+    <!-- Item 2 : Rasiert -->
+    <g transform="translate(13, 41)">
+      <circle cx="5" cy="5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="5" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="4.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x2702;</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="3" fill="#d0d5dd">
+        <tspan x="14" dy="0">Sie k&#252;rzlich rasiert haben</tspan>
+        <tspan x="14" dy="4.2">oder die Haut Schnitte</tspan>
+        <tspan x="14" dy="4.2">oder Verletzungen</tspan>
+        <tspan x="14" dy="4.2">aufweist.</tspan>
+      </text>
+    </g>
+
+    <!-- Item 3 : Allergien -->
+    <g transform="translate(13, 61)">
+      <circle cx="5" cy="5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="5" y="7" font-family="'Helvetica Neue', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x26A0;</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="3" fill="#d0d5dd">
+        <tspan x="14" dy="0">Sie an Allergien,</tspan>
+        <tspan x="14" dy="4.2">empfindlicher Haut,</tspan>
+        <tspan x="14" dy="4.2">Entz&#252;ndungen oder</tspan>
+        <tspan x="14" dy="4.2">Hauterkrankungen leiden.</tspan>
+      </text>
+    </g>
+
+    <!-- Item 4 : Schwanger -->
+    <g transform="translate(13, 80)">
+      <circle cx="5" cy="5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="5" y="7" font-family="'Helvetica Neue', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x2640;</text>
+      <text x="14" y="5" font-family="'Helvetica Neue', sans-serif" font-size="3" fill="#d0d5dd">Sie schwanger sind.</text>
+    </g>
+
+    <!-- Item 5 : Unter 16 -->
+    <g transform="translate(13, 91)">
+      <circle cx="5" cy="5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="5" y="7" font-family="'Helvetica Neue', sans-serif" font-size="4" fill="#FFFFFF" text-anchor="middle" opacity="0.7">16</text>
+      <text x="14" y="5.5" font-family="'Helvetica Neue', sans-serif" font-size="3" fill="#d0d5dd">Sie unter 16 Jahre alt sind.</text>
+    </g>
+  </g>
+
+  <!-- ================================================= -->
+  <!-- VOLET 2 : TIPPS ZUM FARBEN DER HAARE (73 -> 143mm) -->
+  <!-- ================================================= -->
+  <g>
+    <!-- Zone photo placeholder -->
+    <rect x="73" y="3" width="70" height="97" fill="#2a303d" opacity="0.5"/>
+    <rect x="73" y="40" width="70" height="60" fill="#1a1f2a" opacity="0.4"/>
+
+    <!-- Texte "PHOTO PLACEHOLDER" pour le fournisseur -->
+    <text x="108" y="30" font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#556" text-anchor="middle" letter-spacing="0.3">[PLACER PHOTO ICI]</text>
+
+    <!-- Titre -->
+    <text x="108" y="15"
+          font-family="'Helvetica Neue', 'Arial', sans-serif"
+          font-size="4"
+          font-weight="800"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          letter-spacing="0.4">
+      <tspan x="108" dy="0">TIPPS ZUM F&#196;RBEN</tspan>
+      <tspan x="108" dy="5">DER HAARE</tspan>
+    </text>
+
+    <!-- Texte conseils -->
+    <text font-family="'Helvetica Neue', sans-serif" font-size="2.8" fill="#d0d5dd" text-anchor="middle">
+      <tspan x="108" y="47">Haartropfen und Schaum k&#246;nnen</tspan>
+      <tspan x="108" dy="4">Oberfl&#228;chen wie Kleidung, B&#246;den oder</tspan>
+      <tspan x="108" dy="4">Badewannen verf&#228;rben.</tspan>
+    </text>
+
+    <text font-family="'Helvetica Neue', sans-serif" font-size="2.8" fill="#d0d5dd" text-anchor="middle">
+      <tspan x="108" y="63">Reinigen Sie betroffene Bereiche sofort</tspan>
+      <tspan x="108" dy="4">nach dem Kontakt.</tspan>
+    </text>
+
+    <text font-family="'Helvetica Neue', sans-serif" font-size="2.8" fill="#d0d5dd" text-anchor="middle">
+      <tspan x="108" y="75">Die Verwendung von warmem Wasser</tspan>
+      <tspan x="108" dy="4">verbessert den Farbenprozess.</tspan>
+    </text>
+
+    <text font-family="'Helvetica Neue', sans-serif" font-size="2.8" fill="#d0d5dd" text-anchor="middle">
+      <tspan x="108" y="87">Diese milde Formel enth&#228;lt weder</tspan>
+      <tspan x="108" dy="4">Bleichmittel noch T&#246;nungsmittel, daher</tspan>
+      <tspan x="108" dy="4">h&#228;ngen das Farbergebnis und die</tspan>
+      <tspan x="108" dy="4">Haltbarkeit vom Haartyp ab.</tspan>
+    </text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- VOLET 3 : ANWENDUNG (143 -> 213mm) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- Titre -->
+    <text x="178" y="15"
+          font-family="'Helvetica Neue', 'Arial', sans-serif"
+          font-size="4.5"
+          font-weight="800"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          letter-spacing="0.5">ANWENDUNG</text>
+
+    <!-- Schritt 1 -->
+    <g transform="translate(155, 22)">
+      <circle cx="10" cy="7" r="6" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="10" y="8.5" font-family="'Helvetica Neue', sans-serif" font-size="4.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x1F4A7;</text>
+      <text x="10" y="17" font-family="'Helvetica Neue', sans-serif" font-size="3" font-weight="700" fill="#FFFFFF" text-anchor="middle">SCHRITT 1</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.6" fill="#d0d5dd" text-anchor="middle">
+        <tspan x="10" y="21.5">2&#8211;3 Pumpst&#246;&#223;e auf die</tspan>
+        <tspan x="10" dy="3.5">H&#228;nde geben.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 2 -->
+    <g transform="translate(155, 44)">
+      <circle cx="10" cy="7" r="6" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="10" y="9" font-family="'Helvetica Neue', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x270B;</text>
+      <text x="10" y="17" font-family="'Helvetica Neue', sans-serif" font-size="3" font-weight="700" fill="#FFFFFF" text-anchor="middle">SCHRITT 2</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.6" fill="#d0d5dd" text-anchor="middle">
+        <tspan x="10" y="21.5">Gleichm&#228;&#223;ig auf das trockene</tspan>
+        <tspan x="10" dy="3.5">Haar auftragen und 10 Minuten</tspan>
+        <tspan x="10" dy="3.5">einwirken lassen.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 3 -->
+    <g transform="translate(155, 70)">
+      <circle cx="10" cy="7" r="6" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="10" y="9" font-family="'Helvetica Neue', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x1F6BF;</text>
+      <text x="10" y="17" font-family="'Helvetica Neue', sans-serif" font-size="3" font-weight="700" fill="#FFFFFF" text-anchor="middle">SCHRITT 3</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.6" fill="#d0d5dd" text-anchor="middle">
+        <tspan x="10" y="21.5">Haare gr&#252;ndlich aussp&#252;len.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 4 -->
+    <g transform="translate(155, 88)">
+      <circle cx="10" cy="7" r="6" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="10" y="9" font-family="'Helvetica Neue', sans-serif" font-size="4" fill="#FFFFFF" text-anchor="middle" opacity="0.7">&#x2728;</text>
+      <text x="10" y="17" font-family="'Helvetica Neue', sans-serif" font-size="3" font-weight="700" fill="#FFFFFF" text-anchor="middle">SCHRITT 4</text>
+      <text x="10" y="21.5" font-family="'Helvetica Neue', sans-serif" font-size="2.6" fill="#d0d5dd" text-anchor="middle">
+        <tspan x="10" dy="0">Genie&#223;e deine neue,</tspan>
+        <tspan x="10" dy="3.5">intensive Farbe.</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- ======================================================= -->
+  <!-- VOLET 4 : EMPFINDLICHKEITSTEST DER HAUT (213 -> 283mm) -->
+  <!-- ======================================================= -->
+  <g>
+    <!-- Titre -->
+    <text x="248" y="12"
+          font-family="'Helvetica Neue', 'Arial', sans-serif"
+          font-size="3.8"
+          font-weight="800"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          letter-spacing="0.3">
+      <tspan x="248" dy="0">EMPFINDLICHKEITSTEST</tspan>
+      <tspan x="248" dy="5">DER HAUT</tspan>
+    </text>
+
+    <!-- Schritt 1 -->
+    <g transform="translate(220, 24)">
+      <circle cx="6" cy="5" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="6" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="3.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">1</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="2.8" font-weight="700" fill="#FFFFFF">SCHRITT 1</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#d0d5dd">
+        <tspan x="14" y="7">Reinige und trockne den</tspan>
+        <tspan x="14" dy="3.5">Bereich hinter dem Ohr</tspan>
+        <tspan x="14" dy="3.5">oder das innere</tspan>
+        <tspan x="14" dy="3.5">Handgelenk mit Seife.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 2 -->
+    <g transform="translate(220, 42)">
+      <circle cx="6" cy="5" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="6" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="3.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">2</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="2.8" font-weight="700" fill="#FFFFFF">SCHRITT 2</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#d0d5dd">
+        <tspan x="14" y="7">Trage eine kleine Menge</tspan>
+        <tspan x="14" dy="3.5">Shampoo auf.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 3 -->
+    <g transform="translate(220, 56)">
+      <circle cx="6" cy="5" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="6" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="3.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">3</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="2.8" font-weight="700" fill="#FFFFFF">SCHRITT 3</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#d0d5dd">
+        <tspan x="14" y="7">Tupfe es sanft auf die Haut.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 4 -->
+    <g transform="translate(220, 68)">
+      <circle cx="6" cy="5" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="6" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="3.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">4</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="2.8" font-weight="700" fill="#FFFFFF">SCHRITT 4</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#d0d5dd">
+        <tspan x="14" y="7">48 Stunden lang unber&#252;hrt</tspan>
+        <tspan x="14" dy="3.5">lassen.</tspan>
+      </text>
+    </g>
+
+    <!-- Schritt 5 -->
+    <g transform="translate(220, 82)">
+      <circle cx="6" cy="5" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.6"/>
+      <text x="6" y="6.5" font-family="'Helvetica Neue', sans-serif" font-size="3.5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">5</text>
+      <text x="14" y="3" font-family="'Helvetica Neue', sans-serif" font-size="2.8" font-weight="700" fill="#FFFFFF">SCHRITT 5</text>
+      <text font-family="'Helvetica Neue', sans-serif" font-size="2.5" fill="#d0d5dd">
+        <tspan x="14" y="7">Wenn keine R&#246;tung, Reizung</tspan>
+        <tspan x="14" dy="3.5">oder allergische Reaktion</tspan>
+        <tspan x="14" dy="3.5">auftritt, ist es sicher in der</tspan>
+        <tspan x="14" dy="3.5">Anwendung.</tspan>
+      </text>
+    </g>
+  </g>
+
+</svg>

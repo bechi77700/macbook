@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="154mm" height="111mm"
+     viewBox="0 0 154 111"
+     version="1.1">
+  <!--
+    CARTE 1 - VERSO : Gratis-Flasche (Video Testimonial)
+    Format final : 148 x 105 mm (A6 paysage)
+    Fond perdu : 3mm de chaque cote
+  -->
+
+  <!-- Fond noir avec fond perdu -->
+  <rect x="0" y="0" width="154" height="111" fill="#000000"/>
+
+  <!-- Traits de coupe -->
+  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
+    <line x1="3" y1="0" x2="3" y2="1.5"/>
+    <line x1="3" y1="109.5" x2="3" y2="111"/>
+    <line x1="151" y1="0" x2="151" y2="1.5"/>
+    <line x1="151" y1="109.5" x2="151" y2="111"/>
+    <line x1="0" y1="3" x2="1.5" y2="3"/>
+    <line x1="152.5" y1="3" x2="154" y2="3"/>
+    <line x1="0" y1="108" x2="1.5" y2="108"/>
+    <line x1="152.5" y1="108" x2="154" y2="108"/>
+  </g>
+
+  <!-- Titre principal bold -->
+  <text x="10" y="20"
+        font-family="'Helvetica Neue', 'Arial', 'Futura', sans-serif"
+        font-size="10"
+        font-weight="900"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="start"
+        letter-spacing="-0.3">ERHALTE EINE GRATIS-FLASCHE!</text>
+
+  <!-- Corps du texte -->
+  <text font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4.8"
+        font-weight="400"
+        fill="#FFFFFF">
+    <tspan x="10" dy="0" y="32">Sende uns ein echtes Video-Testimonial, in dem</tspan>
+    <tspan x="10" dy="7">du unser Produkt verwendest,</tspan>
+    <tspan x="10" dy="7">und wir schicken dir eine weitere Flasche deiner</tspan>
+    <tspan x="10" dy="7">Wahl <tspan font-weight="900">KOSTENLOS!</tspan></tspan>
+  </text>
+
+  <!-- Email -->
+  <text x="10" y="66"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4.8"
+        fill="#FFFFFF">Sende dein Video an: <tspan font-weight="700">support@everhaarcare.com</tspan></text>
+
+  <!-- Anforderungen titre -->
+  <text x="10" y="78"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="5"
+        font-weight="700"
+        fill="#FFFFFF">Anforderungen:</text>
+
+  <!-- Bullet points -->
+  <text font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4.5"
+        font-weight="400"
+        fill="#FFFFFF">
+    <tspan x="14" y="87">&bull;  Muss ein Video sein</tspan>
+    <tspan x="14" y="93.5">&bull;  Zeige das Vorher und Nachher</tspan>
+    <tspan x="14" y="100">&bull;  Mindestens 15 Sekunden lang</tspan>
+  </text>
+
+</svg>

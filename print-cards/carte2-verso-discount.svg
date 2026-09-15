@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="154mm" height="111mm"
+     viewBox="0 0 154 111"
+     version="1.1">
+  <!--
+    CARTE 2 - VERSO : -20% Discount Code
+    Format final : 148 x 105 mm (A6 paysage)
+    Fond perdu : 3mm de chaque cote
+  -->
+
+  <!-- Fond noir avec fond perdu -->
+  <rect x="0" y="0" width="154" height="111" fill="#000000"/>
+
+  <!-- Traits de coupe -->
+  <g stroke="#FFFFFF" stroke-width="0.15" fill="none" opacity="0.6">
+    <line x1="3" y1="0" x2="3" y2="1.5"/>
+    <line x1="3" y1="109.5" x2="3" y2="111"/>
+    <line x1="151" y1="0" x2="151" y2="1.5"/>
+    <line x1="151" y1="109.5" x2="151" y2="111"/>
+    <line x1="0" y1="3" x2="1.5" y2="3"/>
+    <line x1="152.5" y1="3" x2="154" y2="3"/>
+    <line x1="0" y1="108" x2="1.5" y2="108"/>
+    <line x1="152.5" y1="108" x2="154" y2="108"/>
+  </g>
+
+  <!-- Titre "-20% AUF IHRE NACHSTE BESTELLUNG" -->
+  <text x="77" y="20"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="9"
+        font-weight="800"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="-0.2">&#8211;20 % AUF IHRE N&#196;CHSTE BESTELLUNG</text>
+
+  <!-- Ligne de separation -->
+  <line x1="15" y1="26" x2="139" y2="26" stroke="#FFFFFF" stroke-width="0.3" opacity="0.4"/>
+
+  <!-- "Teilen Sie diesen Code gerne mit Familie & Freunden" -->
+  <text x="77" y="40"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="7"
+        font-weight="700"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">Teilen Sie diesen Code gerne</text>
+  <text x="77" y="49"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="7"
+        font-weight="700"
+        font-style="italic"
+        fill="#FFFFFF"
+        text-anchor="middle">mit Familie &amp; Freunden</text>
+
+  <!-- Texte explicatif -->
+  <text x="77" y="62"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4"
+        font-weight="400"
+        fill="#CCCCCC"
+        text-anchor="middle">Genie&#223;en Sie &#8211;20 % auf den Gesamtbetrag Ihrer Bestellung.</text>
+  <text x="77" y="68"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4"
+        font-weight="400"
+        fill="#CCCCCC"
+        text-anchor="middle">Machen Sie auch Ihren Liebsten eine Freude, indem Sie diesen</text>
+  <text x="77" y="74"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="4"
+        font-weight="400"
+        fill="#CCCCCC"
+        text-anchor="middle">Code weitergeben!</text>
+
+  <!-- Encadre du code promo -->
+  <rect x="35" y="82" width="84" height="16" rx="3" ry="3" fill="#5A6377" opacity="0.7"/>
+  <text x="77" y="93.5"
+        font-family="'Helvetica Neue', 'Arial', sans-serif"
+        font-size="8"
+        font-weight="800"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="1">CODE = DANKE20</text>
+
+</svg>

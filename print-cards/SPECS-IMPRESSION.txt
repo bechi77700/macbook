@@ -1,0 +1,66 @@
+===============================================
+  EVERHAAR HAIR CARE - SPECIFICATIONS IMPRESSION
+===============================================
+
+FICHIERS FOURNIS (SVG vectoriel - ouvrir dans Adobe Illustrator et enregistrer en .ai)
+==================================================================================
+
+CARTE 1 - VIDEO TESTIMONIAL (insert colis)
+-------------------------------------------
+  Recto : carte1-recto-logo.svg        → Logo EverHaar
+  Verso : carte1-verso-testimonial.svg  → Demande video testimonial + flasche gratuite
+
+CARTE 2 - MERCI + CODE PROMO (insert colis)
+--------------------------------------------
+  Recto : carte2-recto-danke.svg       → Message de remerciement
+  Verso : carte2-verso-discount.svg    → Code promo -20% DANKE20
+
+GUIDE UTILISATION (insert boite shampooing)
+-------------------------------------------
+  guide-depliant-shampooing.svg         → Depliant accordeon 4 volets
+  NOTE : Zone photo au volet 2 a remplacer par la photo fournie separement
+
+
+SPECIFICATIONS TECHNIQUES - CARTES 1 & 2
+==========================================
+  Format final :     148 x 105 mm (A6 paysage)
+  Fond perdu :       3 mm de chaque cote
+  Taille fichier :   154 x 111 mm (avec fond perdu)
+  Zone de securite : 5 mm du bord de coupe (aucun texte/element important)
+  Impression :       Recto-verso
+  Papier :           Couche 350 g/m2 mat ou satine
+  Couleur fond :     Noir quadri riche (C60 M40 Y40 K100)
+  Texte :            Blanc 100% (verifier surimpression)
+  Finition :         Decoupe droite, coins vifs ou arrondi 2mm (au choix)
+
+
+SPECIFICATIONS TECHNIQUES - GUIDE DEPLIANT
+============================================
+  Format deplie :    280 x 100 mm
+  Format plie :      70 x 100 mm (4 volets)
+  Fond perdu :       3 mm de chaque cote
+  Taille fichier :   286 x 106 mm (avec fond perdu)
+  Pliage :           Accordeon (zigzag) - 3 plis
+  Impression :       Recto seul
+  Papier :           Couche 170-200 g/m2 mat ou satine
+  Couleur fond :     Degrade bleu fonce / noir (voir fichier)
+  Finition :         Decoupe droite
+
+  Volet 1 (gauche)  : "Nicht verwenden, wenn" - Avertissements
+  Volet 2           : "Tipps zum Farben der Haare" - PHOTO A PLACER
+  Volet 3           : "Anwendung" - 4 etapes
+  Volet 4 (droite)  : "Empfindlichkeitstest der Haut" - 5 etapes
+
+
+NOTES POUR LE FOURNISSEUR
+===========================
+- Fichiers SVG vectoriels : ouvrir dans Illustrator, convertir textes en courbes,
+  enregistrer en .ai
+- Convertir couleurs en CMYK avant impression
+- Le volet 2 du guide contient un placeholder [PLACER PHOTO ICI] :
+  remplacer par la photo produit fournie separement
+- Les icones dans les cercles sont des caracteres Unicode :
+  le fournisseur peut les remplacer par des icones vectorielles custom
+  (voir images de reference fournies)
+- Polices utilisees : Helvetica Neue (ou Arial), style serif pour le logo EverHaar
+  → Convertir en courbes/outlines avant impression
