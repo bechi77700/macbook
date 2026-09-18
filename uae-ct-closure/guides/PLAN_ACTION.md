@@ -1,92 +1,86 @@
-# Plan d'action — à partir du 18/09/2026
+# Plan d'action — 18/09/2026
 
-## Ce qui a changé par rapport à la première version
+## Où en est réellement le dossier
 
-Le plan initial s'étalait sur 12 jours parce qu'il supposait qu'il fallait
-obtenir la lettre d'annulation auprès de DIEZ — délai externe, non maîtrisé.
+Le blocage n'a jamais été un document manquant. La lettre d'annulation DIEZ
+existe depuis le 28/02/2025 et les états financiers audités depuis le
+04/02/2025. Le formulaire de radiation est ouvert à l'étape 1/2 et attend
+seulement d'être complété et soumis.
 
-**Cette contrainte n'existe pas.** La lettre d'annulation date du 28/02/2025 et
-elle est déjà en ta possession. Les états financiers audités aussi. Le dossier
-peut partir aujourd'hui.
+Ce qui manquait vraiment : deux pièces à produire, trois incohérences à
+corriger, et une soumission à faire.
 
-Il ne reste qu'un chemin critique, et il est interne : signer et tamponner deux
-documents.
+## Les trois corrections
 
----
+| # | Problème | Correction |
+|---|---|---|
+| 1 | `101001430723` pris pour le TRN | C'est la **référence du dossier**. Le TRN est `104552889800001`. Les documents citent les deux |
+| 2 | Portail en **année civile**, états financiers arrêtés au **31/01/2025** | La lettre déclare sur les deux bases — tout est à zéro, donc pas de contradiction |
+| 3 | Motif de cessation : *« Opened a new business activity in Sharjah »* | Ne répond pas à la question du 30/04/2025. Texte de remplacement fourni |
 
 ## Séquence
 
-### Étape 1 — Vérification portail (15 min, à faire en premier)
+### 1 — Vérifications portail (15 min)
 
-Trois captures à récupérer dans EmaraTax :
+- **Supporting Documents** affiche `Add/View(1)` : ouvrir ce fichier pour
+  savoir ce que c'est. Chaque zone est limitée à **3 fichiers**
+- Onglet **Returns** : les déclarations CT sont-elles déposées ?
+- Onglet **Payments / Penalties** : quels montants sont exigibles ?
 
-1. **Corporate Tax → Tax Periods** — confirmer que la période enregistrée est
-   bien 13/02/2024 → 31/01/2025
-2. **Corporate Tax → Returns** — la déclaration de cette période est-elle
-   déposée ?
-3. **Payments / Penalties** — quels montants sont déjà exigibles ?
+Les deux dernières captures conditionnent la suite. Envoie-les.
 
-C'est la seule étape qui peut invalider le reste du dossier. Si la période
-enregistrée dans le portail diffère de celle des états financiers audités,
-la lettre et la balance doivent être réalignées avant soumission.
+### 2 — Signature et tampon (30 min)
 
-### Étape 2 — Signature et tampon (30 min)
+À imprimer, signer à la main, tamponner, rescanner :
 
-Deux documents à imprimer, signer à la main, tamponner, rescanner :
+- `out/01_Declaration_Letter_FTA_104552889800001.pdf` (2 pages)
+- `out/02_Trial_Balance_104552889800001.pdf` (1 page)
 
-- `out/01_Declaration_Letter_FTA_101001430723.pdf` (2 pages)
-- `out/02_Trial_Balance_101001430723.pdf` (1 page)
+Signature manuscrite scannée, pas de signature tapée. Le tampon utilisé sur
+les états financiers du 04/02/2025 est visible page 2 du rapport d'audit — si
+tu l'as encore, utilise le même. Sinon : signature manuscrite + copie de
+l'Emirates ID ou du passeport.
 
-Signature manuscrite scannée, pas de signature tapée. Si tu n'as plus le
-tampon de la société : signature manuscrite + copie de l'Emirates ID ou du
-passeport en annexe. Le tampon utilisé sur les états financiers du 04/02/2025
-est visible page 2 du rapport d'audit — si tu l'as encore, utilise le même.
+### 3 — Soumission (30 min)
 
-### Étape 3 — Soumission de la réponse FTA (30 min)
+Suivre `emaratax/01_Reponse_Additional_Information.md` : corriger le motif de
+cessation, uploader dans les deux zones, coller la note, puis **Next Step** →
+*Review and Declaration* → soumettre.
 
-Suivre `emaratax/01_Reponse_Additional_Information.md` :
-5 pièces jointes + le texte à coller dans le champ commentaire.
+**C'est l'action la plus urgente : 9 jours de retard sur une échéance au
+09/09/2026, après trois relances depuis avril 2025.**
 
-**Retard actuel : 9 jours sur une échéance au 09/09/2026, après 3 relances
-depuis avril 2025.** C'est l'action la plus urgente du dossier.
+### 4 — Déclarations CT
 
-### Étape 4 — Déclaration CT si nécessaire (1 h)
+Dépend de l'étape 1. Voir `emaratax/02_Point_Bloquant_CT_Return.md`.
+Avec l'exercice en année civile, **deux** déclarations peuvent être dues.
+Exposition estimée si aucune n'est déposée : ~11 000 AED, et le barème double
+en octobre 2026.
 
-Dépend du résultat de l'étape 1. Voir
-`emaratax/02_Point_Bloquant_CT_Return.md`.
+### 5 — Règlement puis, le cas échéant, demande de remise
 
-Si la déclaration de la période 13/02/2024–31/01/2025 n'a jamais été déposée,
-c'est un second front, indépendant, qui coûte 500 AED par mois de retard et
-qui bloquera la radiation même après acceptation de ta réponse.
-
-### Étape 5 — Règlement des pénalités
-
-Une radiation n'est approuvée qu'une fois tous les montants dus réglés. Le
-solde exact est dans l'onglet Payments.
-
----
+La radiation n'est approuvée qu'une fois le solde à zéro.
 
 ## Ce qu'il ne faut pas faire
 
-**Ne pas attendre d'avoir tout pour soumettre l'étape 3.** Elle est déjà en
-retard et ne dépend de rien d'autre que de deux signatures.
+**Ne pas cliquer « Save as Draft » en croyant avoir soumis.** Un brouillon
+n'est pas une soumission.
 
-**Ne pas écrire « FY2024 » ou « FY2025 » nulle part.** La période fiscale est
-13/02/2024 → 31/01/2025. Toute mention d'année civile crée une incohérence
-avec les états financiers audités et relance un cycle de questions de trois à
-six mois.
+**Ne pas écrire « FY2024 » ou « FY2025 ».** Les périodes sont
+13/02/2024–31/12/2024 et 01/01/2025–28/02/2025 côté portail, 13/02/2024–31/01/2025
+côté états financiers. Une mention d'année civile approximative relance un
+cycle de questions de trois à six mois.
 
 **Ne pas déclarer « aucun compte bancaire ».** Il y en avait deux chez Wio
-Bank, clos le 29/01/2025, et c'est écrit noir sur blanc dans le rapport du
-liquidateur que tu joins. Une déclaration qui contredit sa propre pièce
-jointe est le moyen le plus rapide de faire rejeter le dossier.
+Bank, clos le 29/01/2025, écrit dans le rapport du liquidateur que tu joins.
+Une déclaration qui contredit sa propre pièce jointe fait rejeter le dossier.
 
-**Ne pas répondre « Yes » à Qualifying Free Zone Person.** Aucun gain à 0 de
-revenu, obligations supplémentaires à la clé.
+**Ne pas essayer de faire modifier la période fiscale.** Le champ est grisé,
+et ouvrir ce front coûterait des mois pour un enjeu nul.
 
----
+**Ne pas répondre « Yes » à Qualifying Free Zone Person.**
 
-## Échéance de fond
+## Échéance
 
-La radiation CT doit être finalisée avant le **30/09/2026**. Il reste 12 jours.
-Le dossier est complet — il ne manque que l'exécution.
+Radiation à finaliser avant le **30/09/2026**. Il reste 12 jours. Le dossier
+est complet — il ne manque que l'exécution.

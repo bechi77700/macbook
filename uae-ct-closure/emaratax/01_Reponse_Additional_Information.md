@@ -1,164 +1,174 @@
-# Réponse à "Additional Information pending for 101001430723"
+# Répondre à « Additional Information pending » — procédure exacte
 
-## Ce qui a changé
-
-Les pièces fournies le 18/09/2026 (licence, lettre d'annulation DIEZ, rapport du
-liquidateur + états financiers audités, MOA) montrent que **tu possèdes déjà
-presque tout ce que la FTA réclame depuis avril 2025**. Le dossier n'est pas
-bloqué par un document manquant côté DIEZ : il est bloqué parce que rien n'a
-jamais été uploadé.
-
-| Demande FTA | Statut |
-|---|---|
-| (a) Official cancellation of the trade license | **Déjà en main** — Notice of Termination/Cancellation, DIEZ, 28/02/2025 |
-| (b) Balance sheet | **Déjà en main** — Statement of Financial Position, p.2 du rapport audité |
-| (b) Profit and loss | **Déjà en main** — Statement of Comprehensive Income, p.3 |
-| (b) Trial Balance | **Manquait** — généré : `02_Trial_Balance_101001430723.pdf` |
-| (b) Declaration letter (revenus + actifs + périodes) | **Manquait** — généré : `01_Declaration_Letter_FTA_101001430723.pdf` |
-
-La FTA écrit « Full Financial Statements … **or** a declaration letter ». On
-fournit les deux. Avec des états financiers audités et tamponnés par un
-liquidateur agréé, le dossier est bien plus solide qu'une simple lettre.
+Écran : **Corporate Tax De-Registration**, étape 1/2 (*De-Registration Details*).
+Le formulaire est en mode édition, avec trois zones à traiter :
+les **uploads**, la **note à l'officier**, et le champ **motif de cessation**.
 
 ---
 
-## Faits établis (tous recoupables avec une pièce jointe)
+## Trois écarts détectés dans le portail — à corriger avant d'envoyer
+
+### 1. Deux identifiants distincts, à ne pas confondre
 
 | | |
 |---|---|
-| Raison sociale | ELIES ECOMMERCE & DIGITAL - FZCO |
-| Registration No. | DSO-FZCO-39398 |
-| Licence | 41532, émise 13/02/2024, expirée 12/02/2025 |
-| Activité | Ecommerce |
-| Actionnaire / manager | Elies Bechahed (français), 100 parts × 100 AED = 10 000 AED |
-| **Période fiscale unique** | **13/02/2024 → 31/01/2025** |
-| Résolution de liquidation | 30/01/2025, effet 31/01/2025 |
-| Annulation licence DIEZ | 28/02/2025 — vérifiable sur https://verify.diez.ae/yFkkaN |
-| Liquidateur | Axis Auditing & Accounting LLC, Walid Aqil AlRafi, Reg. 1104, File AAA/15037/25 |
-| Comptes bancaires | Wio Bank PJSC — AED 9485724553 et EUR 9451723126, **clos le 29/01/2025** |
+| **TRN** (enregistrement CT) | `104552889800001` |
+| **Référence du dossier de radiation** | `101001430723` |
 
-**Chiffres audités (AED) :**
+`101001430723` n'est **pas** le TRN — c'est la référence du dossier, celle qui
+apparaît dans le libellé de la tâche. Les documents citent désormais les deux.
 
-| Poste | Montant |
-|---|---|
-| Revenus | **0** |
-| Charges administratives (honoraires juridiques) | 6 260 |
-| Résultat de la période | **(6 260)** |
-| Total actifs | **0** |
-| Total passifs | **0** |
-| Capital social | 10 000 |
-| Report à nouveau | (6 260) |
-| Compte courant d'associé | (3 740) |
-| Total capitaux propres | **0** |
+### 2. La période fiscale du portail contredit les états financiers
 
-> ⚠️ La période fiscale **n'est pas l'année civile**. C'est 13/02/2024 → 31/01/2025.
-> Toute déclaration mentionnant « FY2024 » ou « FY2025 » sera incohérente avec
-> les états financiers audités et relancera le cycle de questions.
+Le formulaire affiche **Tax Period : January – December**. Tes états financiers
+audités couvrent **13/02/2024 → 31/01/2025**. Ce n'est pas la même base.
 
----
+Périodes fiscales CT réelles, selon l'enregistrement du portail :
 
-## Pièces à joindre (dans cet ordre)
-
-| # | Fichier | Source |
+| Période | Du | Au |
 |---|---|---|
-| 1 | Notice of Termination/Cancellation — DIEZ, 28/02/2025 | ton PDF `Cancellation_LIC-0161960` |
-| 2 | Liquidator's Report & Financial Statements 13/02/2024–31/01/2025 | ton PDF `Audit Report` (9 pages) |
-| 3 | `02_Trial_Balance_101001430723.pdf` | généré — **à signer + tamponner** |
-| 4 | `01_Declaration_Letter_FTA_101001430723.pdf` | généré — **à signer + tamponner** |
-| 5 | Trade Licence 41532 | ton PDF `LIC NEW` |
+| Première | 13/02/2024 (immatriculation) | 31/12/2024 |
+| Finale | 01/01/2025 | 28/02/2025 (cessation) |
 
----
+Le champ Tax Period est grisé, tu ne peux pas le modifier — et **il ne faut
+pas essayer**. La lettre déclare donc sur **les deux bases** : tout est à zéro
+dans tous les cas, donc aucune contradiction. C'est ce qui empêche l'officier
+de relancer sur « vos périodes ne correspondent pas ».
 
-## Texte à coller dans le champ commentaire
+### 3. Le motif de cessation ne répond pas à la question posée
+
+Le champ contient aujourd'hui :
+> *Opened a new business activity in Sharjah (Shams Freezone)*
+
+La toute première question de l'officier, le **30/04/2025**, était précisément
+*« Kindly clarify more the reason of CT De-Registration »*. Elle n'a jamais reçu
+de vraie réponse : ouvrir une société à Sharjah explique ce que tu as fait
+ensuite, pas pourquoi celle-ci a cessé. Ce champ est éditable — remplace-le par :
 
 ```
-Reference: Corporate Tax Registration No. 101001430723
-Subject: Response to "Additional Information pending" - De-Registration Application
+The Company never commenced commercial operations and generated no revenue
+at any time. The shareholder resolved to wind it up on 30 January 2025;
+liquidation took effect on 31 January 2025 and was completed by a licensed
+liquidator, Axis Auditing & Accounting L.L.C (Registration No. 1104). The
+trade licence was officially cancelled by Dubai Silicon Oasis on 28 February
+2025. The shareholder subsequently established a separate entity in Shams
+Free Zone, Sharjah, for his business activity.
+```
 
-Dear Sir/Madam,
+On garde la mention de Sharjah : elle est déjà au dossier, la supprimer
+créerait une incohérence.
 
-Further to your requests dated 30 April 2025, 13 February 2026 and
-09 September 2026, we submit the following in full.
+---
 
-ITEM (A) - OFFICIAL CANCELLATION OF THE TRADE LICENCE
+## Uploads — attention, 3 fichiers maximum par zone
 
-We attach the Notice of Termination/Cancellation of Company issued by
-Dubai Silicon Oasis on 28 February 2025, confirming that ELIES ECOMMERCE
-& DIGITAL - FZCO, trade licence number 41532, has been de-registered and
-cancelled and that all relevant formalities are complete. The document may
-be verified directly with the issuing authority at
-https://verify.diez.ae/yFkkaN
+| Zone | Formats | Limite |
+|---|---|---|
+| **Upload Supporting Documents** | PDF, DOC, DOCX | 15 Mo/fichier — **3 fichiers max** |
+| **Upload Financial Documents** (Optional) | DOC, DOCX, PDF, XLS, XLSX | 15 Mo/fichier — **3 fichiers max** |
 
-ITEM (B) - FULL FINANCIAL STATEMENTS FOR ALL TAX PERIODS
+La zone Supporting affiche déjà **Add/View(1)** : un fichier est présent.
+**Ouvre-le avant d'ajouter quoi que ce soit** — s'il s'agit déjà de la lettre
+d'annulation DIEZ, tu as une place de libre ; sinon il te reste deux places.
 
-The Company had a single tax period, running from 13 February 2024 (date
-of registration in Dubai Silicon Oasis) to 31 January 2025 (effective date
-of liquidation). We attach:
+Répartition à viser :
 
-1. The Liquidator's Report and audited Financial Statements for the period
-   from 13 February 2024 to 31 January 2025, prepared under IFRS and
-   signed and stamped by Axis Auditing & Accounting L.L.C (Registration
-   No. 1104). These comprise the Statement of Financial Position (Balance
-   Sheet), the Statement of Comprehensive Income (Profit and Loss), the
-   Statement of Changes in Equity, the Statement of Cash Flows and the
-   Notes.
+**Supporting Documents**
+1. *(fichier déjà présent — à identifier)*
+2. `Licence_Cancellation_DIEZ_28Feb2025.pdf`
+3. `Trade_Licence_41532.pdf`
 
-2. The Trial Balance as at 31 January 2025, signed and stamped, which
-   agrees with the audited financial statements.
+**Financial Documents**
+1. `Audited_Financial_Statements_13Feb2024_31Jan2025.pdf` *(9 p., 2,6 Mo — passe sans compression)*
+2. `Trial_Balance_31Jan2025.pdf` *(signé + tamponné)*
+3. `Declaration_Letter_Revenue_Assets.pdf` *(signé + tamponné)*
 
-3. A signed and stamped Declaration Letter stating the revenue, the assets
-   and the tax periods concerned, as required.
+Si la zone Supporting est déjà pleine avec un fichier sans rapport, mets la
+lettre d'annulation DIEZ en priorité absolue : c'est le point (a) de la
+demande.
 
-SUMMARY OF THE FIGURES (AED)
+---
 
-   Tax period 13 February 2024 to 31 January 2025
-   Revenue ................................. NIL
-   Total assets ............................ NIL
-   Total liabilities ....................... NIL
-   Total equity ............................ NIL
-   Administration expenses ............... 6,260  (legal and professional
-                                                  fees, borne by the
-                                                  shareholder personally)
+## La note à l'officier
 
-The Company never commenced commercial operations and earned no revenue at
-any time. Its two bank accounts with Wio Bank P.J.S.C were closed on
-29 January 2025. All employee dues and all creditors were settled and no
-claims remain outstanding. The liquidation proceedings were closed by the
-liquidator and the trade licence was cancelled on 28 February 2025. From
-1 February 2025 to 28 February 2025 the Company was already in liquidation
-and carried out no activity, held no assets and operated no bank account.
+`Officer Notes` → **View/Add notes** → zone *« Please share your notes with the
+officer »* → bouton **Share Note**.
 
-REQUEST
+C'est un simple champ texte, séparé du formulaire. À coller :
 
-All information previously requested has now been provided in full. We
-respectfully request the Authority to approve the de-registration of the
-Company from Corporate Tax pursuant to Article 52 of Federal Decree-Law
-No. 47 of 2022.
+```
+Reference: TRN 104552889800001 - De-Registration Ref. 101001430723
 
-We remain at your disposal for any further clarification.
+Dear Officer,
 
-Yours faithfully,
+Further to your notes of 30 April 2025, 13 February 2026 and 09 September
+2026, all outstanding items have now been uploaded.
+
+(a) OFFICIAL CANCELLATION OF THE TRADE LICENCE
+Notice of Termination/Cancellation of Company issued by Dubai Silicon Oasis
+on 28 February 2025 for licence 41532, confirming that all formalities are
+complete and the company/licence has been de-registered and cancelled. It
+can be verified with the issuing authority at https://verify.diez.ae/yFkkaN
+
+(b) FINANCIAL STATEMENTS FOR ALL TAX PERIODS
+- Liquidator's Report and audited Financial Statements for 13 February 2024
+  to 31 January 2025, signed and stamped by Axis Auditing & Accounting
+  L.L.C (Reg. No. 1104): Statement of Financial Position, Statement of
+  Comprehensive Income, Statement of Changes in Equity, Statement of Cash
+  Flows and Notes.
+- Trial Balance as at 31 January 2025, signed and stamped.
+- Declaration Letter of revenue and assets, signed and stamped, stating the
+  tax periods.
+
+DECLARED FIGURES (AED)
+Tax period 13 Feb 2024 - 31 Dec 2024:  revenue NIL, assets NIL
+Tax period 01 Jan 2025 - 28 Feb 2025:  revenue NIL, assets NIL
+Audited period 13 Feb 2024 - 31 Jan 2025: revenue NIL, total assets NIL,
+total liabilities NIL, total equity NIL, administration expenses AED 6,260
+(legal and professional fees borne by the shareholder personally).
+
+The Company's tax periods are registered on a January to December basis,
+while the liquidation financial statements were drawn to 31 January 2025.
+Revenue and assets were NIL under either basis. No transaction occurred
+between 31 January 2025 and the cessation date of 28 February 2025.
+
+REASON FOR DE-REGISTRATION
+The Company never commenced operations and earned no revenue. It was
+liquidated with effect from 31 January 2025 and its licence was cancelled
+on 28 February 2025. Its two bank accounts with Wio Bank P.J.S.C were
+closed on 29 January 2025. All employees' dues and all creditors were
+settled, with no claims outstanding.
+
+We request approval of the de-registration under Article 52 of Federal
+Decree-Law No. 47 of 2022.
+
 Elies Bechahed
 Shareholder and Manager
-ELIES ECOMMERCE & DIGITAL - FZCO
-Corporate Tax Registration No. 101001430723
 ```
+
+Si le champ refuse le texte (limite de caractères), garde les blocs (a), (b)
+et DECLARED FIGURES, et supprime REASON FOR DE-REGISTRATION — il est déjà
+couvert par le champ *Detailed Reason for Cessation* et par la lettre jointe.
 
 ---
 
-## Checklist avant "Submit"
+## Ordre d'exécution
 
-- [ ] Lettre de déclaration **imprimée, signée à la main, tamponnée, rescannée**
-- [ ] Balance générale idem — signée + tamponnée
-- [ ] Vérifier dans EmaraTax que la période fiscale enregistrée est bien
-      **13/02/2024 → 31/01/2025**. Si le portail affiche une période différente
-      (année civile, ou une période supplémentaire après 31/01/2025), me le dire
-      **avant** de soumettre : la lettre doit être réalignée.
-- [ ] 5 PDF lisibles, < 5 Mo chacun
-- [ ] Capture d'écran de l'accusé de réception après soumission
+1. Ouvrir le fichier déjà présent dans **Supporting Documents** pour savoir ce que c'est
+2. Corriger le champ **Detailed Reason for Cessation**
+3. Uploader les fichiers dans les deux zones
+4. **View/Add notes** → coller la note → **Share Note**
+5. **Next Step** → *Review and Declaration* → vérifier → soumettre
+6. Capturer l'accusé de réception et son numéro de référence
 
-## Après soumission
+> Ne clique pas **Save as Draft** en pensant avoir terminé : un brouillon
+> n'est pas une soumission et l'échéance du 09/09/2026 est déjà dépassée
+> de 9 jours.
 
-- [ ] Noter le numéro de référence de la soumission
-- [ ] Vérifier que la Required Action passe en "submitted" / "under review"
-- [ ] Surveiller l'onglet Corporate Tax > Returns (voir `02_Point_Bloquant_CT_Return.md`)
+## Checklist avant soumission
+
+- [ ] Lettre de déclaration et balance générale **signées à la main et tamponnées**
+- [ ] Motif de cessation remplacé
+- [ ] Lettre d'annulation DIEZ bien présente dans les pièces
+- [ ] Aucune mention de « FY2024 » ou « FY2025 » nulle part
+- [ ] Le TRN cité est `104552889800001`, pas la référence du dossier

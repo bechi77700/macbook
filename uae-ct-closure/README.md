@@ -1,7 +1,7 @@
 # Clôture Corporate Tax — ELIES ECOMMERCE & DIGITAL - FZCO
 
-Dossier de radiation CT auprès de la FTA. Réf. CT **101001430723**, licence
-DIEZ **41532**.
+Dossier de radiation CT auprès de la FTA. TRN **104552889800001**, réf. dossier
+**101001430723**, licence DIEZ **41532**.
 
 ## État du dossier au 18/09/2026
 
@@ -21,8 +21,16 @@ que rien n'avait été uploadé.
 
 ## Chiffres de référence
 
-Période fiscale unique : **13/02/2024 → 31/01/2025** (immatriculation →
-date d'effet de la liquidation). **Ce n'est pas l'année civile.**
+Le portail enregistre l'exercice en **année civile**, alors que les états
+financiers audités sont arrêtés au 31/01/2025. Deux bases coexistent :
+
+| Base | Périodes |
+|---|---|
+| Périodes fiscales CT (portail) | 13/02/2024 → 31/12/2024, puis 01/01/2025 → 28/02/2025 |
+| États financiers audités | 13/02/2024 → 31/01/2025 |
+
+Tout étant à zéro, la déclaration est identique sur les deux bases — la lettre
+les couvre explicitement toutes les deux.
 
 | Poste (AED) | |
 |---|---|
@@ -40,11 +48,11 @@ Accounting LLC, signés le 04/02/2025.
 
 ```
 out/
-  01_Declaration_Letter_FTA_101001430723.pdf   à signer + tamponner
-  02_Trial_Balance_101001430723.pdf            à signer + tamponner
+  01_Declaration_Letter_FTA_104552889800001.pdf  à signer + tamponner
+  02_Trial_Balance_104552889800001.pdf           à signer + tamponner
 emaratax/
-  01_Reponse_Additional_Information.md         pièces + texte à coller
-  02_Point_Bloquant_CT_Return.md               la déclaration CT et ses pénalités
+  01_Reponse_Additional_Information.md         procédure de soumission complète
+  02_Point_Bloquant_CT_Return.md               déclarations CT et pénalités
 guides/
   PLAN_ACTION.md                               séquence d'exécution
   EMARATAX_PROCEDURES.md                       navigation dans le portail

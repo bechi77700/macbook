@@ -21,7 +21,12 @@ COMPANY = {
     "licence_issue_date": "13 February 2024",
     "licence_expiry_date": "12 February 2025",
     "activity": "Ecommerce",
-    "ct_reference": "101001430723",
+    # ATTENTION : deux identifiants distincts.
+    # TRN = numero d'enregistrement CT (15 chiffres), affiche dans le formulaire.
+    # application_ref = reference du dossier de radiation, utilisee dans le
+    # libelle de la tache "Additional Information pending for ...".
+    "trn": "104552889800001",
+    "application_ref": "101001430723",
     "vat_status": "Not registered for Value Added Tax",
     "currency": "AED",
     "incorporation_date": "13 February 2024",
@@ -32,6 +37,8 @@ COMPANY = {
     "cancellation_letter_date": "28 February 2025",
     "cancellation_verify_url": "https://verify.diez.ae/yFkkaN",
     "licence_status": "cancelled",
+    # Date de cessation telle que saisie dans le formulaire de radiation.
+    "cessation_date": "28 February 2025",
 }
 
 SIGNATORY = {
@@ -62,13 +69,22 @@ LETTER_DATE = "18 September 2026"
 # est couverte par une declaration de neant dans la lettre : la societe
 # etait deja liquidee, sans actif ni compte bancaire.
 # ---------------------------------------------------------------------------
-TAX_PERIOD = {
-    "label": "First and final tax period",
+# Le portail enregistre l'exercice fiscal en ANNEE CIVILE ("January - December").
+# Les periodes fiscales CT sont donc celles-ci, et non la periode des etats
+# financiers. Il faut declarer sur les deux bases pour eviter tout ecart.
+CT_TAX_PERIODS = [
+    {"label": "First tax period", "start": "13 February 2024", "end": "31 December 2024"},
+    {"label": "Final tax period", "start": "1 January 2025",   "end": "28 February 2025"},
+]
+
+# Periode couverte par les etats financiers audites (base liquidation).
+FS_PERIOD = {
     "start": "13 February 2024",
     "end": "31 January 2025",
 }
 
-RESIDUAL_PERIOD = {
+# Entre la cloture des comptes et la cessation : aucune operation.
+DORMANT_TAIL = {
     "start": "1 February 2025",
     "end": "28 February 2025",
 }
@@ -92,6 +108,7 @@ FIGURES = {
 
 # Balance generale a etablir a la date de cloture (seul document reclame par
 # la FTA qui ne figure pas dans le rapport d'audit).
+TRIAL_BALANCE_DATE = "31 January 2025"
 TRIAL_BALANCE = [
     # (compte, debit, credit)
     ("Share capital",                                        0,    10000),

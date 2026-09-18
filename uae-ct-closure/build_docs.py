@@ -16,8 +16,9 @@ from openpyxl.styles import Font, Alignment, Border, Side
 from openpyxl.worksheet.page import PageMargins
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import (COMPANY, SIGNATORY, LIQUIDATOR, LETTER_DATE, TAX_PERIOD,
-                    RESIDUAL_PERIOD, FIGURES, TRIAL_BALANCE, BANK_ACCOUNTS)
+from config import (COMPANY, SIGNATORY, LIQUIDATOR, LETTER_DATE, CT_TAX_PERIODS,
+                    FS_PERIOD, DORMANT_TAIL, FIGURES, TRIAL_BALANCE,
+                    TRIAL_BALANCE_DATE, BANK_ACCOUNTS)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
@@ -57,8 +58,8 @@ def build_letter():
     # --- letterhead (supprimer ce bloc si impression sur papier a en-tete)
     _p(doc, COMPANY["name"], size=13, bold=True, align=C, space_after=1)
     _p(doc, ", ".join(COMPANY["address_lines"]), size=8.5, align=C, space_after=1)
-    _p(doc, "Registration No. %s  |  Trade Licence No. %s  |  Corporate Tax Registration No. %s"
-       % (COMPANY["registration_no"], COMPANY["licence_no"], COMPANY["ct_reference"]),
+    _p(doc, "Registration No. %s  |  Trade Licence No. %s  |  Corporate Tax TRN %s"
+       % (COMPANY["registration_no"], COMPANY["licence_no"], COMPANY["trn"]),
        size=8.5, align=C, space_after=8)
 
     _p(doc, LETTER_DATE, size=9.5, space_after=6)
@@ -66,8 +67,9 @@ def build_letter():
     _p(doc, "United Arab Emirates", space_after=8)
 
     _p(doc, "Subject: Declaration of Revenue and Assets for all Tax Periods - "
-            "Corporate Tax De-Registration (TRN %s)" % COMPANY["ct_reference"],
-       bold=True, space_after=8)
+            "Corporate Tax De-Registration", bold=True, space_after=2)
+    _p(doc, "Corporate Tax TRN: %s     De-Registration Application Ref.: %s"
+       % (COMPANY["trn"], COMPANY["application_ref"]), bold=True, space_after=8)
 
     _p(doc, "Dear Sir / Madam,", space_after=6)
 
@@ -94,25 +96,34 @@ def build_letter():
     # --- 2. tax periods
     _p(doc, "2.  Tax Periods Concerned", bold=True, space_after=3)
     _p(doc,
-       "The Company had a single Tax Period, running from %s (date of registration) "
-       "to %s (effective date of liquidation). The Company was placed into "
-       "liquidation by a resolution of the shareholder passed on %s. Its trade "
-       "licence was subsequently cancelled by %s on %s. No Tax Period exists "
-       "after that date."
-       % (TAX_PERIOD["start"], TAX_PERIOD["end"], COMPANY["liquidation_resolution_date"],
-          COMPANY["licence_authority"], COMPANY["cancellation_letter_date"]),
+       "The Company's financial year is registered with the Authority as January to "
+       "December. On that basis the Company had two Tax Periods: from %s (date of "
+       "incorporation) to %s, and from %s to %s (date of cessation of business). No "
+       "Tax Period exists after that date."
+       % (CT_TAX_PERIODS[0]["start"], CT_TAX_PERIODS[0]["end"],
+          CT_TAX_PERIODS[1]["start"], CT_TAX_PERIODS[1]["end"]),
+       align=J, space_after=4)
+    _p(doc,
+       "For the purposes of the liquidation, statutory financial statements were "
+       "prepared and audited for the period from %s to %s, the effective date of "
+       "liquidation resolved by the shareholder on %s. Those statements therefore "
+       "span the whole of the first Tax Period and the greater part of the final "
+       "one. As the Company earned no revenue and held no assets at any time, the "
+       "declaration below is identical under either basis."
+       % (FS_PERIOD["start"], FS_PERIOD["end"],
+          COMPANY["liquidation_resolution_date"]),
        align=J, space_after=6)
 
     # --- 3. declaration table
     _p(doc, "3.  Declaration of Revenue and Assets", bold=True, space_after=3)
 
-    rows = [
-        ("Tax Period", "Revenue (AED)", "Total Assets (AED)", "Total Liabilities (AED)"),
-        ("%s to %s" % (TAX_PERIOD["start"], TAX_PERIOD["end"]),
-         "NIL (0.00)", "NIL (0.00)", "NIL (0.00)"),
-        ("%s to %s" % (RESIDUAL_PERIOD["start"], RESIDUAL_PERIOD["end"]),
-         "NIL (0.00)", "NIL (0.00)", "NIL (0.00)"),
-    ]
+    rows = [("Tax Period", "Revenue (AED)", "Total Assets (AED)", "Total Liabilities (AED)")]
+    for p in CT_TAX_PERIODS:
+        rows.append(("%s to %s" % (p["start"], p["end"]),
+                     "NIL (0.00)", "NIL (0.00)", "NIL (0.00)"))
+    rows.append(("%s to %s  (audited financial statements)"
+                 % (FS_PERIOD["start"], FS_PERIOD["end"]),
+                 "NIL (0.00)", "NIL (0.00)", "NIL (0.00)"))
     t = doc.add_table(rows=len(rows), cols=4)
     t.style = "Table Grid"
     for i, row in enumerate(rows):
@@ -161,9 +172,11 @@ def build_letter():
         "notice may be verified at %s."
         % (COMPANY["licence_authority"], COMPANY["cancellation_letter_date"],
            COMPANY["cancellation_verify_url"]),
-        "Between %s and %s the Company was already in liquidation, held no assets, "
-        "operated no bank account and carried out no activity whatsoever."
-        % (RESIDUAL_PERIOD["start"], RESIDUAL_PERIOD["end"]),
+        "Between %s and %s, that is between the close of the audited financial "
+        "statements and the date of cessation, the Company was already in "
+        "liquidation, held no assets, operated no bank account and carried out no "
+        "activity whatsoever. No transaction was recorded in that interval."
+        % (DORMANT_TAIL["start"], DORMANT_TAIL["end"]),
     ]
     for f in facts:
         p = doc.add_paragraph(style="List Bullet")
@@ -186,8 +199,8 @@ def build_letter():
         "%s to %s, comprising the Statement of Financial Position, the Statement of "
         "Comprehensive Income, the Statement of Changes in Equity, the Statement of "
         "Cash Flows and the Notes, signed and stamped."
-        % (TAX_PERIOD["start"], TAX_PERIOD["end"]),
-        "Trial Balance as at %s, signed and stamped." % TAX_PERIOD["end"],
+        % (FS_PERIOD["start"], FS_PERIOD["end"]),
+        "Trial Balance as at %s, signed and stamped." % TRIAL_BALANCE_DATE,
         "Trade Licence No. %s issued by %s." % (COMPANY["licence_no"], COMPANY["licence_authority"]),
         "This Declaration Letter, signed and stamped.",
     ]
@@ -226,7 +239,7 @@ def build_letter():
        size=8.5, space_after=6)
     _p(doc, "(Company stamp)", size=8.5, italic=True, space_after=0)
 
-    path = os.path.join(OUT, "01_Declaration_Letter_FTA_%s.docx" % COMPANY["ct_reference"])
+    path = os.path.join(OUT, "01_Declaration_Letter_FTA_%s.docx" % COMPANY["trn"])
     doc.save(path)
     return path
 
@@ -262,12 +275,13 @@ def build_trial_balance():
     ws.merge_cells("A1:C1"); put("A1", COMPANY["name"], size=13, bold=True, align=Cn)
     ws.merge_cells("A2:C2"); put("A2", ", ".join(COMPANY["address_lines"]), size=9, align=Cn)
     ws.merge_cells("A3:C3")
-    put("A3", "Trade Licence No. %s  |  Corporate Tax Registration No. %s"
-        % (COMPANY["licence_no"], COMPANY["ct_reference"]), size=9, align=Cn)
+    put("A3", "Trade Licence No. %s  |  Corporate Tax TRN %s  |  De-Registration Ref. %s"
+        % (COMPANY["licence_no"], COMPANY["trn"], COMPANY["application_ref"]),
+        size=9, align=Cn)
     ws.merge_cells("A5:C5"); put("A5", "TRIAL BALANCE", size=12, bold=True, align=Cn)
     ws.merge_cells("A6:C6")
     put("A6", "As at %s  (period from %s to %s)"
-        % (TAX_PERIOD["end"], TAX_PERIOD["start"], TAX_PERIOD["end"]), size=9.5, align=Cn)
+        % (TRIAL_BALANCE_DATE, FS_PERIOD["start"], FS_PERIOD["end"]), size=9.5, align=Cn)
     ws.merge_cells("A7:C7"); put("A7", "All amounts in UAE Dirhams (AED)", size=9, align=Cn)
 
     r = 9
@@ -303,9 +317,16 @@ def build_trial_balance():
     ws.merge_cells("A%d:C%d" % (r, r))
     put("A%d" % r,
         "This trial balance agrees with the audited financial statements for the "
-        "period from %s to %s signed on %s."
-        % (TAX_PERIOD["start"], TAX_PERIOD["end"], LIQUIDATOR["fs_signature_date"]), size=8.5)
-    ws.row_dimensions[r].height = 26
+        "period from %s to %s signed on %s. The Company's tax periods are registered "
+        "on a January to December basis (%s to %s and %s to %s). No transaction was "
+        "recorded between %s and the date of cessation on %s, so the balances above "
+        "were unchanged at cessation. Revenue and total assets were NIL in every tax "
+        "period on either basis."
+        % (FS_PERIOD["start"], FS_PERIOD["end"], LIQUIDATOR["fs_signature_date"],
+           CT_TAX_PERIODS[0]["start"], CT_TAX_PERIODS[0]["end"],
+           CT_TAX_PERIODS[1]["start"], CT_TAX_PERIODS[1]["end"],
+           TRIAL_BALANCE_DATE, COMPANY["cessation_date"]), size=8.5)
+    ws.row_dimensions[r].height = 62
     ws["A%d" % r].alignment = Alignment(wrap_text=True, vertical="top")
 
     r += 3
@@ -322,7 +343,7 @@ def build_trial_balance():
     ws.page_margins = PageMargins(left=0.7, right=0.7, top=0.7, bottom=0.7)
     ws.sheet_view.showGridLines = False
 
-    path = os.path.join(OUT, "02_Trial_Balance_%s.xlsx" % COMPANY["ct_reference"])
+    path = os.path.join(OUT, "02_Trial_Balance_%s.xlsx" % COMPANY["trn"])
     wb.save(path)
     return path
 

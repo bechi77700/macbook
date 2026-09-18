@@ -1,79 +1,95 @@
-# Point bloquant : la déclaration CT de la période 13/02/2024 – 31/01/2025
+# Point bloquant : les déclarations CT
 
-## Le problème
+## Pourquoi ça compte
 
-La FTA n'approuve pas une radiation tant que **toutes les déclarations CT ont
-été déposées** et que toutes les sommes dues (impôt + pénalités) sont réglées.
-Répondre à la demande d'informations ne suffit donc pas : si la déclaration
-finale n'a jamais été déposée, la radiation restera bloquée même avec un
-dossier parfait.
+La FTA n'approuve pas une radiation tant que **toutes les déclarations CT sont
+déposées** et que tous les montants dus (impôt + pénalités) sont réglés.
+Répondre à la demande d'informations ne suffit donc pas. Tu peux fournir un
+dossier parfait et rester bloqué sur ce point.
 
-**À vérifier immédiatement dans EmaraTax :**
-Dashboard → Corporate Tax → onglet **Returns / Tax Returns**
+## Ce que l'année civile change
 
-Trois cas possibles :
+Le portail enregistre l'exercice en **January – December**. Il n'y a donc pas
+une déclaration à déposer, mais **deux** :
 
-| Ce que tu vois | Ce que ça veut dire |
-|---|---|
-| Période 13/02/2024–31/01/2025 avec statut *Submitted* / *Filed* | Rien à faire, tu es propre |
-| Période 13/02/2024–31/01/2025 avec statut *Pending* / *Overdue* | **À déposer, pénalités en cours** |
-| Période affichée différente (ex. année civile) | Signale-le-moi avant de soumettre quoi que ce soit |
+| Période fiscale | Du | Au | Échéance (9 mois) |
+|---|---|---|---|
+| Première | 13/02/2024 | 31/12/2024 | **30/09/2025** |
+| Finale | 01/01/2025 | 28/02/2025 | **30/11/2025** |
 
-## L'exposition chiffrée si elle n'est pas déposée
+C'est une hypothèse fondée sur l'exercice enregistré et la date de cessation
+saisie (28/02/2025), pas une certitude : seul l'onglet **Returns** du portail
+fait foi. Il est possible que la FTA n'ait ouvert qu'une seule période, ou
+qu'une déclaration ait déjà été déposée.
 
-Échéance CT = 9 mois après la fin de la période fiscale.
-Fin de période **31/01/2025** → échéance **31/10/2025**.
+**À vérifier tout de suite :** Corporate Tax → onglet **Returns / Tax Returns**,
+puis **Payments / Penalties**. Envoie-moi les deux captures.
 
-Barème des pénalités de dépôt tardif :
-- 500 AED par mois (ou fraction de mois) pendant les 12 premiers mois
-- 1 000 AED par mois à partir du 13e mois
+## Exposition si rien n'a été déposé
 
-| Date | Mois de retard | Pénalité cumulée estimée |
+Barème : 500 AED par mois (ou fraction) les 12 premiers mois, puis 1 000 AED/mois.
+
+| Déclaration | Retard au 18/09/2026 | Pénalité estimée |
 |---|---|---|
-| Aujourd'hui (18/09/2026) | 11 | ~5 500 AED |
-| 31/10/2026 | 12 | ~6 000 AED |
-| 31/12/2026 | 14 | ~8 000 AED |
+| Période 1 (échéance 30/09/2025) | 12 mois | ~6 000 AED |
+| Période 2 (échéance 30/11/2025) | 10 mois | ~5 000 AED |
+| **Total** | | **~11 000 AED** |
 
-Chiffres indicatifs calculés sur le barème public — le montant réel exigible
-est celui affiché dans EmaraTax, onglet **Payments / Penalties**. Vérifie-le :
-c'est aussi là que tu verras si une pénalité de radiation tardive
-(1 000 AED/mois, plafond 10 000) a été émise.
+Ordre de grandeur sur barème public — le montant exigible est celui affiché
+dans EmaraTax. La période 1 bascule à 1 000 AED/mois en **octobre 2026** :
+c'est dans deux semaines.
 
-**Chaque mois d'attente coûte 500 à 1 000 AED. C'est la seule horloge qui
-tourne encore contre toi.**
+Vérifie aussi si une pénalité de **radiation tardive** (1 000 AED/mois, plafond
+10 000) a été émise. La demande a été déposée avant le 30/04/2025, donc dans
+les trois mois de la cessation du 28/02/2025 — elle devrait être dans les
+délais. Si une pénalité de ce type apparaît quand même, elle est contestable.
 
-## Comment remplir la déclaration
+## Comment remplir chaque déclaration
 
-Périmètre : période **13/02/2024 → 31/01/2025**, revenus nil, perte de 6 260 AED.
-
-| Champ | Réponse | Pourquoi |
+| Champ | Période 1 | Période 2 |
 |---|---|---|
-| Tax Period | 13/02/2024 – 31/01/2025 | Doit correspondre aux états financiers audités |
-| Qualifying Free Zone Person ? | **No** | Aucun bénéfice à 0 de revenu, et répondre Yes déclenche des obligations supplémentaires |
-| Small Business Relief ? | **Yes** | Revenus < 3M AED. Simplifie radicalement la déclaration |
-| Accounting basis | Accrual (conforme aux états financiers IFRS) | Cohérence avec le rapport d'audit |
-| Revenue | 0 | Statement of Comprehensive Income |
-| Expenses | 6 260 | Administration expenses, note 4 |
-| Taxable income | 0 | Perte, pas de base imposable |
-| Tax payable | 0 | |
+| Tax Period | 13/02/2024 – 31/12/2024 | 01/01/2025 – 28/02/2025 |
+| Qualifying Free Zone Person ? | **No** | **No** |
+| Small Business Relief ? | **Yes** | **Yes** |
+| Revenue | 0 | 0 |
+| Taxable income | 0 | 0 |
+| Tax payable | 0 | 0 |
 
-> **Le piège QFZP.** Répondre « Yes » à Qualifying Free Zone Person déclenche
-> les tests de revenus qualifiants et de substance, et expose à des questions
-> supplémentaires. Avec 0 de revenu, le résultat fiscal est nul dans tous les
-> cas de figure. Réponds **No**.
+Les charges de 6 260 AED (honoraires juridiques) figurent dans les états
+financiers audités arrêtés au 31/01/2025. Si un champ de charges est demandé et
+que le SBR est élu, il est en principe sans effet sur le résultat fiscal — qui
+reste nul. En cas de doute sur la ventilation entre les deux périodes,
+rattache-les à la période 2 : la liquidation a été résolue le 30/01/2025, les
+honoraires de liquidation lui sont économiquement imputables.
 
-> **Sur le Small Business Relief.** Élire le SBR fait perdre le report du
-> déficit fiscal. Sans importance ici : la société est liquidée, le déficit de
-> 6 260 AED ne sera jamais utilisé. Le gain de simplicité l'emporte.
+> **Le piège QFZP.** Répondre « Yes » à *Qualifying Free Zone Person* déclenche
+> les tests de revenus qualifiants et de substance. À 0 de revenu, le résultat
+> fiscal est nul dans tous les cas. Réponds **No**.
+
+> **Sur le Small Business Relief.** L'élire fait perdre le report du déficit
+> fiscal. Sans importance : la société est liquidée, les 6 260 AED de déficit
+> ne serviront jamais. Le gain de simplicité l'emporte.
+
+## Demande de remise de pénalité
+
+Si le total dépasse ~10 000 AED, une demande de remise
+(*Reconsideration / Penalty Waiver*) mérite d'être déposée. Les arguments
+disponibles sont solides et tous documentés :
+
+- la société n'a jamais eu d'activité ni de revenu — aucun impôt éludé
+- elle était déjà liquidée et radiée avant les échéances de déclaration
+- la demande de radiation a été déposée dans les délais, dès le début 2025
+- le retard porte sur des déclarations à zéro, sans enjeu budgétaire
+
+À déposer **après** régularisation, pas avant : une demande de remise sur une
+déclaration non déposée n'a aucune chance.
 
 ## Ordre d'exécution
 
-1. **D'abord** : vérifier l'onglet Returns et l'onglet Payments/Penalties
-   → me renvoyer les deux captures
-2. **Ensuite** : déposer la déclaration si elle est en attente
-3. **Puis** : répondre à la tâche Additional Information (dossier prêt)
-4. **Enfin** : régler les pénalités si des montants sont dus
+1. Vérifier **Returns** et **Payments/Penalties** → me renvoyer les captures
+2. Répondre à la demande d'informations — déjà 9 jours de retard, ne dépend de rien
+3. Déposer les déclarations en attente
+4. Régler les montants dus
+5. Le cas échéant, demander la remise des pénalités
 
-Les étapes 2 et 3 sont indépendantes — si la déclaration demande du temps, ne
-retarde pas la réponse à la demande d'informations, elle a déjà 9 jours de
-retard.
+Les étapes 2 et 3 sont indépendantes. Ne retarde pas l'une pour l'autre.
