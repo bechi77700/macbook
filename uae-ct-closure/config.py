@@ -74,7 +74,10 @@ LETTER_DATE = "18 September 2026"
 # financiers. Il faut declarer sur les deux bases pour eviter tout ecart.
 CT_TAX_PERIODS = [
     {"label": "First tax period", "start": "13 February 2024", "end": "31 December 2024"},
-    {"label": "Final tax period", "start": "1 January 2025",   "end": "28 February 2025"},
+    # Le portail conserve l'annee civile complete comme periode finale, bien que
+    # la cessation soit intervenue le 28/02/2025 (confirme par la declaration
+    # 230011618275 deposee le 18/09/2026 pour 01/01/2025 - 31/12/2025).
+    {"label": "Final tax period", "start": "1 January 2025",   "end": "31 December 2025"},
 ]
 
 # Periode couverte par les etats financiers audites (base liquidation).

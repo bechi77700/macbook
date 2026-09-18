@@ -3,7 +3,25 @@
 Dossier de radiation CT auprès de la FTA. TRN **104552889800001**, réf. dossier
 **101001430723**, licence DIEZ **41532**.
 
-## État du dossier au 18/09/2026
+## État du dossier au 18/09/2026 (fin de journée)
+
+Tout ce qui dépendait de nous est déposé. Le dossier attend la décision de
+l'officier FTA.
+
+| Obligation | Statut |
+|---|---|
+| Déclaration CT 13/02/2024 - 31/12/2024 | Déposée le 23/07/2025, position nette 0 |
+| Déclaration CT 01/01/2025 - 31/12/2025 | Déposée le 18/09/2026, demande 230011618275, position nette 0 |
+| Pénalités et montants dus | 0,00 AED - aucune pénalité émise |
+| Demande de radiation + pièces | Soumise le 18/09/2026 |
+
+Les trois conditions de l'article 52 sont réunies : déclarations à jour, solde
+à zéro, licence annulée avec justificatif officiel.
+
+Reste ouvert : la Required Action « Trade License Number 41532 » (échéance
+12/02/2025), dont le libellé complet n'a pas encore été lu.
+
+## Historique du diagnostic
 
 La FTA réclame deux choses depuis le 30/04/2025, relancées le 13/02/2026 puis
 le 09/09/2026. Les documents officiels de la société montrent que **presque
@@ -19,6 +37,9 @@ tout existait déjà** :
 Le dossier n'était pas bloqué par une pièce manquante. Il était bloqué parce
 que rien n'avait été uploadé.
 
+Le « 30/09/2026 » du brief initial n'était pas une échéance de radiation : c'est
+la date limite de dépôt de la déclaration CT 2025, déposée le 18/09/2026.
+
 ## Chiffres de référence
 
 Le portail enregistre l'exercice en **année civile**, alors que les états
@@ -26,7 +47,7 @@ financiers audités sont arrêtés au 31/01/2025. Deux bases coexistent :
 
 | Base | Périodes |
 |---|---|
-| Périodes fiscales CT (portail) | 13/02/2024 → 31/12/2024, puis 01/01/2025 → 28/02/2025 |
+| Périodes fiscales CT (portail) | 13/02/2024 → 31/12/2024, puis 01/01/2025 → 31/12/2025 |
 | États financiers audités | 13/02/2024 → 31/01/2025 |
 
 Tout étant à zéro, la déclaration est identique sur les deux bases — la lettre
