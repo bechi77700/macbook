@@ -14,6 +14,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, Border, Side
 from openpyxl.worksheet.page import PageMargins
+from openpyxl.drawing.image import Image as XLImage
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import (COMPANY, SIGNATORY, LIQUIDATOR, LETTER_DATE, CT_TAX_PERIODS,
@@ -23,6 +24,10 @@ from config import (COMPANY, SIGNATORY, LIQUIDATOR, LETTER_DATE, CT_TAX_PERIODS,
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
 os.makedirs(OUT, exist_ok=True)
+
+# Signature manuscrite + tampon de la societe, fournis par le signataire.
+SIGN_IMG = os.path.join(HERE, "assets", "signature_stamp.png")
+HAS_SIGN = os.path.isfile(SIGN_IMG)
 
 AED = lambda n: "{:,.2f}".format(n) if n else "-"
 
@@ -230,14 +235,20 @@ def build_letter():
        "financial statements enclosed.",
        align=J, space_after=10)
 
-    _p(doc, "Yours faithfully,", space_after=26)
+    _p(doc, "Yours faithfully,", space_after=2)
+    if HAS_SIGN:
+        pic = doc.add_paragraph()
+        pic.paragraph_format.space_after = Pt(0)
+        pic.paragraph_format.space_before = Pt(0)
+        pic.add_run().add_picture(SIGN_IMG, width=Cm(5.2))
+    else:
+        _p(doc, "", space_after=24)
     _p(doc, "_______________________________", space_after=2)
     _p(doc, SIGNATORY["name"], bold=True, space_after=0)
     _p(doc, SIGNATORY["title"], space_after=0)
     _p(doc, COMPANY["name"], space_after=0)
     _p(doc, "Email: %s  |  Mobile: %s" % (SIGNATORY["email"], SIGNATORY["phone"]),
-       size=8.5, space_after=6)
-    _p(doc, "(Company stamp)", size=8.5, italic=True, space_after=0)
+       size=8.5, space_after=0)
 
     path = os.path.join(OUT, "01_Declaration_Letter_FTA_%s.docx" % COMPANY["trn"])
     doc.save(path)
@@ -329,12 +340,19 @@ def build_trial_balance():
     ws.row_dimensions[r].height = 62
     ws["A%d" % r].alignment = Alignment(wrap_text=True, vertical="top")
 
-    r += 3
+    r += 2
+    if HAS_SIGN:
+        img = XLImage(SIGN_IMG)
+        img.width, img.height = 190, 86
+        ws.row_dimensions[r].height = 68
+        ws.add_image(img, "A%d" % r)
+        r += 1
+    else:
+        r += 1
     put("A%d" % r, "_______________________________")
     r += 1; put("A%d" % r, SIGNATORY["name"], bold=True)
     r += 1; put("A%d" % r, SIGNATORY["title"])
     r += 1; put("A%d" % r, "Date: %s" % LETTER_DATE, size=9)
-    r += 1; put("A%d" % r, "(Company stamp)", size=9)
 
     ws.page_setup.orientation = "portrait"
     ws.page_setup.fitToWidth = 1

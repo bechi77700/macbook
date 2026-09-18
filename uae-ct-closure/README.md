@@ -47,9 +47,9 @@ Accounting LLC, signés le 04/02/2025.
 ## Contenu
 
 ```
-out/
-  01_Declaration_Letter_FTA_104552889800001.pdf  à signer + tamponner
-  02_Trial_Balance_104552889800001.pdf           à signer + tamponner
+out/                                           (non versionné)
+  01_Declaration_Letter_FTA_104552889800001.pdf  signé + tamponné
+  02_Trial_Balance_104552889800001.pdf           signé + tamponné
 emaratax/
   01_Reponse_Additional_Information.md         procédure de soumission complète
   02_Point_Bloquant_CT_Return.md               déclarations CT et pénalités
@@ -81,3 +81,14 @@ audités qu'elle accompagne.
 
 La conversion PDF utilise LibreOffice headless (`libreoffice-writer`,
 `libreoffice-calc`).
+
+## Signature et tampon
+
+`build_docs.py` incruste automatiquement `assets/signature_stamp.png`
+(signature manuscrite + tampon de la société) dans la lettre et la balance.
+
+**Ce fichier n'est volontairement pas versionné**, ni les documents générés
+dans `out/` une fois signés : une signature et un tampon sont réutilisables
+tels quels par quiconque y a accès, y compris extraits d'un PDF. Ils restent
+en local. Si `assets/signature_stamp.png` est absent, les documents sont
+générés avec un espace vide à signer à la main.
