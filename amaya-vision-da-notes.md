@@ -124,3 +124,52 @@ Ordre des sections :
 - Des variantes sans SKU (ex. DUBAI : Azure Crest, Noir Alloy).
 - Les avis affichés sur une PDP lunettes parlent de bracelets/chaînes (carrousel global non filtré par catégorie).
 - Incohérence de délais : PDP lunettes annonce **7-12 j ouvrés**, PDP bijoux **5-8 j ouvrés**.
+
+---
+
+# ADDENDUM — DA visuelle (captures desktop du 20/09/2026)
+
+> Site conçu **mobile-first** (confirmé par le client) : le desktop rend moins bien, les décisions de DA se lisent sur mobile.
+
+## Direction photo (le vrai ADN)
+
+**3 registres visuels qui cohabitent :**
+
+1. **Lifestyle street / "cité" — le registre dominant et le plus fort.**
+   Modèles hommes 18-30 ans, majoritairement noirs et métis, quelques blancs. Tenues : t-shirt blanc, hoodie noir, polo noir, doudoune. Décors : barre d'immeuble ensoleillée, escaliers béton, voiture (volant Chevrolet), rue de nuit avec néons, bord de mer. **Lumière naturelle dure, soleil franc, ombres marquées.** Aucun studio blanc, aucune pose catalogue. Cadrage souvent serré (cou, torse, mains) pour que le produit domine.
+2. **Packshot produit** — deux sous-styles qui ne se parlent pas :
+   - bijoux → macro sur fond noir ou sur peau/vêtement noir ;
+   - lunettes → packshot sur **fond blanc pur** (visible dans les grilles produits, ça casse la continuité visuelle des rangées de cartes).
+3. **Créa promo 3D "chrome"** — le 2e hero : produits en lévitation sur fond dégradé bleu-violet, reflets miroir, typo chromée biseautée `WELCOME SUMMER / 1 ACHETÉ = 1 OFFERT / SUR TOUT LE SITE`. Registre publicitaire assumé, en rupture totale avec le minimalisme du reste.
+
+**Packaging** : boîtes noires mates rigides floquées `AMAYA` en blanc, shootées en pile sur fond blanc. C'est le visuel n°4/5 de la galerie lunettes.
+
+## Éléments d'UI vus sur les captures (à ajouter au modèle PDP)
+
+- **Barre de stock** sous le prix : `Plus que 5 en stock` (rouge) ← barre de progression rouge → `Forte demande` (gris, à droite). Présente sur lunettes ET bijoux.
+- **Sélecteur couleur lunettes** : vignettes packshot carrées (pas des pastilles) + nom de la couleur sous chaque vignette.
+- **Sélecteur taille bijoux** : boutons carrés `18 / 20 / 22`, actif = fond noir texte blanc.
+- **Bijoux** : bouton `Acheter avec shop` (Shop Pay violet) sous le CTA noir — **absent des PDP lunettes**.
+- **Bloc `VIRAL SUR TIKTOK`** (bijoux) : logo TikTok + carrousel 4 vignettes UGC verticales avec flèches.
+- **Bandeau offre** : bloc noir pleine largeur, `1 ACHETÉ, 1 OFFERT*` (lunettes) / `1 BIJOU ACHETÉ, LE 2ÈME OFFERT*` (bijoux) en blanc bold centré + 2 lignes de conditions.
+- **Section marque bas de page** : image lifestyle plein cadre à gauche + titre + texte à droite.
+  - lunettes : `CONÇUES POUR LE SOLEIL. PENSÉES POUR LE STYLE.`
+  - bijoux : `PENSÉS POUR DURER. CRÉÉS POUR ÊTRE PORTÉS.`
+- **Avis clients** : cartes avec **vraie photo/vidéo UGC** (selfie piscine, voiture, ascenseur, main baguée ; certaines avec bouton play), texte, 5 étoiles vertes + `Vérifié`, prénom + initiale. Carrousel avec flèches `‹ ›`.
+- **Cartes produit (grilles)** : image, badge pill `1 ACHETÉ = 1 OFFERT` en haut à droite (bleu pâle `#DAF3FE` ou blanc), titre uppercase, prix + prix barré.
+- **Bandeau Instagram** : titre `RETROUVEZ NOUS ICI.` + `@amayavision.off`, puis bande d'images UGC défilante pleine largeur, fondu blanc sur les bords.
+- **Footer** : fond noir, 4 colonnes, puis **wordmark `AMAYA` géant** en blanc, pleine largeur, bas de page.
+- **Logo header** : wordmark `AMAYA` noir, bold, letter-spacing large, centré.
+
+## Devise / marché
+
+Les captures affichent des **prix en USD** ($58.00 barré $69.00 pour MYKONOS, $92.00 barré $114.00 pour la CHAÎNE CUBAN 14MM) avec sélecteur `USD`, **alors que la barre d'annonce dit `LIVRAISON GRATUITE DANS TOUTE L'EUROPE` et que tout le copy est en français.** Shopify Markets convertit, mais le message et la langue ne suivent pas.
+
+## Règles pour les visuels d'un nouveau produit
+
+1. Visuel 1 (vignette collection) : **lifestyle porté**, cadrage serré, lumière naturelle dure — pas de packshot blanc si le produit va côtoyer des cartes lifestyle.
+2. 2-3 lifestyle portés, décor urbain/extérieur ensoleillé, modèle homme 18-30.
+3. 1-2 macro produit sur fond sombre ou sur peau.
+4. 1 visuel packaging boîte noire `AMAYA`.
+5. 1 packshot détouré pour les vignettes de variantes.
+6. Pas de fond studio gris, pas de mannequin souriant type stock photo, pas de flat-lay pastel.
