@@ -1,0 +1,326 @@
+{%- comment -%}
+====================================================================
+AMAYA — WAVE CAP — WIDGET D'OFFRE "1 ACHETÉ = 1 OFFERT"
+À coller dans UN bloc "Liquid personnalisé" du template produit
+wave-cap-interieur-satin, placé JUSTE AU-DESSUS du bouton
+"Ajouter au panier" natif du thème.
+
+⚠️ Masquer le bouton d'ajout natif du thème (ce widget a le sien),
+   sinon double CTA. Le CSS en bas s'en charge automatiquement.
+
+CONFIG : voir le bloc <script> "AMAYA_CFG" en bas du fichier.
+====================================================================
+{%- endcomment -%}
+
+<div class="amaya-offer" id="amayaOffer">
+
+  <div class="ao-head">1 ACHETÉ = 1 OFFERT</div>
+
+  <!-- ---------- OPTION 1 : STANDARD ---------- -->
+  <label class="ao-opt" for="aoStd">
+    <input type="radio" name="aoPlan" id="aoStd" value="1">
+    <span class="ao-dot" aria-hidden="true"></span>
+    <span class="ao-body">
+      <span class="ao-line">
+        <span class="ao-name">STANDARD</span>
+        <span class="ao-price">{{ 3999 | money }}</span>
+      </span>
+      <span class="ao-sub">1 bonnet</span>
+    </span>
+  </label>
+
+  <!-- ---------- OPTION 2 : PACK DUO ---------- -->
+  <label class="ao-opt ao-opt--best" for="aoDuo">
+    <span class="ao-flag">MEILLEURE OFFRE</span>
+    <input type="radio" name="aoPlan" id="aoDuo" value="2" checked>
+    <span class="ao-dot" aria-hidden="true"></span>
+    <span class="ao-body">
+      <span class="ao-line">
+        <span class="ao-name">PACK DUO <span class="ao-off">-50%</span></span>
+        <span class="ao-price">
+          {{ 3999 | money }}
+          <s class="ao-was">{{ 7998 | money }}</s>
+        </span>
+      </span>
+      <span class="ao-sub">Le 2ème bonnet offert — stock très limité</span>
+
+      <!-- sélecteurs de couleur du pack -->
+      <span class="ao-picks" id="aoPicks">
+        <span class="ao-picks-label">Couleur</span>
+
+        <span class="ao-pick">
+          <span class="ao-num">#1</span>
+          <select class="ao-select" data-slot="1" aria-label="Couleur du bonnet 1">
+            {%- for v in product.variants -%}
+              <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}{% if forloop.first %} selected{% endif %}>{{ v.title }}{% unless v.available %} — épuisé{% endunless %}</option>
+            {%- endfor -%}
+          </select>
+        </span>
+
+        <span class="ao-pick">
+          <span class="ao-num">#2</span>
+          <select class="ao-select" data-slot="2" aria-label="Couleur du bonnet 2">
+            {%- for v in product.variants -%}
+              <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}{% if forloop.last %} selected{% endif %}>{{ v.title }}{% unless v.available %} — épuisé{% endunless %}</option>
+            {%- endfor -%}
+          </select>
+        </span>
+      </span>
+    </span>
+  </label>
+
+  <!-- ---------- BARRE CADEAU ---------- -->
+  <div class="ao-gift" id="aoGift">
+    <span class="ao-gift-img">
+      <img src="REMPLACER_PAR_URL_IMAGE_BONNET_SATIN" alt="Bonnet satin de nuit offert" loading="lazy" width="44" height="44">
+    </span>
+    <span class="ao-gift-txt">+ BONNET SATIN DE NUIT OFFERT <em>(protège tes cheveux la nuit)</em></span>
+  </div>
+
+  <!-- ---------- CTA ---------- -->
+  <button type="button" class="ao-cta" id="aoCta">
+    <span class="ao-cta-main">AJOUTER AU PANIER — <span id="aoCtaPrice">{{ 3999 | money }}</span></span>
+    <s class="ao-cta-was" id="aoCtaWas">{{ 7998 | money }}</s>
+  </button>
+  <div class="ao-reassure">En stock · Expédié sous 24-48h</div>
+  <div class="ao-error" id="aoError" hidden></div>
+
+</div>
+
+<style>
+/* ============ AMAYA WAVE CAP — WIDGET OFFRE ============ */
+.amaya-offer{
+  font-family: var(--font-body--family, 'Figtree', sans-serif);
+  color:#050505; margin:18px 0 0;
+}
+.amaya-offer *{box-sizing:border-box;}
+
+/* en-tête */
+.ao-head{
+  font-family: var(--font-heading--family, 'Inter', sans-serif);
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  text-align:center; padding-bottom:10px; border-bottom:1px solid #050505; margin-bottom:0;
+}
+
+/* option */
+.ao-opt{
+  position:relative; display:flex; align-items:flex-start; gap:12px;
+  padding:16px 14px; border:1px solid #e5e5e5; border-top:none;
+  cursor:pointer; background:#fff; transition:border-color .12s ease, background .12s ease;
+}
+.ao-opt:first-of-type{border-top:none;}
+.ao-opt input{position:absolute; opacity:0; pointer-events:none;}
+.ao-opt:has(input:checked){border-color:#050505; background:#fff;}
+.ao-opt--best:has(input:checked){border-width:2px; padding:15px 13px;}
+
+/* pastille radio */
+.ao-dot{
+  flex:0 0 auto; width:16px; height:16px; border-radius:50%;
+  border:1px solid #bdbdbd; margin-top:2px; position:relative; background:#fff;
+}
+.ao-opt:has(input:checked) .ao-dot{border-color:#050505;}
+.ao-opt:has(input:checked) .ao-dot::after{
+  content:''; position:absolute; inset:3px; border-radius:50%; background:#050505;
+}
+
+.ao-body{flex:1 1 auto; min-width:0;}
+.ao-line{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.ao-name{
+  font-family: var(--font-heading--family, 'Inter', sans-serif);
+  font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+}
+.ao-off{
+  display:inline-block; margin-left:6px; background:#DAF3FE; color:#1c1c1c;
+  font-size:10px; font-weight:800; letter-spacing:.04em; padding:3px 6px; vertical-align:1px;
+}
+.ao-price{font-size:14px; font-weight:600; white-space:nowrap;}
+.ao-was{color:#9a9a9a; font-weight:400; margin-left:5px; font-size:12.5px;}
+.ao-opt .ao-sub{display:block; font-size:12px; color:#6b6b6b; margin-top:4px; line-height:1.4;}
+
+/* drapeau MEILLEURE OFFRE */
+.ao-flag{
+  position:absolute; top:0; right:0; transform:translateY(-100%);
+  background:#050505; color:#fff;
+  font-family: var(--font-heading--family, 'Inter', sans-serif);
+  font-size:9.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  padding:4px 9px; line-height:1.2;
+}
+
+/* sélecteurs du pack */
+.ao-picks{display:none; margin-top:14px;}
+.ao-opt:has(input:checked) .ao-picks{display:block;}
+.ao-picks-label{
+  display:block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:#9a9a9a; margin-bottom:7px;
+}
+.ao-pick{display:flex; align-items:center; gap:8px; margin-bottom:7px;}
+.ao-pick:last-child{margin-bottom:0;}
+.ao-num{
+  flex:0 0 28px; text-align:center; font-size:11px; font-weight:700; color:#6b6b6b;
+  border:1px solid #e5e5e5; padding:8px 0; background:#fafafa;
+}
+.ao-select{
+  flex:1 1 auto; min-width:0; height:34px; padding:0 30px 0 10px;
+  font-family:inherit; font-size:12.5px; color:#050505;
+  border:1px solid #e5e5e5; border-radius:0; background:#fff;
+  -webkit-appearance:none; appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23050505' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 10px center;
+}
+.ao-select:focus{outline:none; border-color:#050505;}
+
+/* barre cadeau */
+.ao-gift{
+  display:flex; align-items:center; gap:10px;
+  background:#050505; color:#fff; padding:9px 12px;
+}
+.ao-gift-img{flex:0 0 auto; width:44px; height:44px; background:#fff; overflow:hidden;}
+.ao-gift-img img{width:100%; height:100%; object-fit:cover; display:block;}
+.ao-gift-txt{
+  font-size:11.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; line-height:1.35;
+}
+.ao-gift-txt em{
+  display:block; font-style:normal; font-weight:400; text-transform:none;
+  letter-spacing:0; color:#bdbdbd; font-size:11px; margin-top:2px;
+}
+
+/* CTA */
+.ao-cta{
+  width:100%; margin-top:12px; border:none; border-radius:0; cursor:pointer;
+  background:#000; color:#fff; padding:16px 20px;
+  font-family:inherit; font-size:14px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  display:flex; align-items:baseline; justify-content:center; gap:8px;
+  transition:opacity .12s ease;
+}
+.ao-cta:hover{opacity:.88;}
+.ao-cta:disabled{opacity:.5; cursor:not-allowed;}
+.ao-cta-was{color:#9a9a9a; font-weight:400; font-size:12.5px;}
+.ao-reassure{text-align:center; font-size:11.5px; color:#6b6b6b; margin-top:8px;}
+.ao-error{
+  margin-top:10px; padding:9px 11px; border:1px solid #c0392b;
+  color:#c0392b; font-size:12px; line-height:1.4;
+}
+
+/* masque le CTA natif du thème pour éviter le double bouton */
+.amaya-offer ~ * .product-form__buttons,
+.amaya-offer ~ * [data-testid="add-to-cart-button"],
+.amaya-offer ~ * .shopify-payment-button{display:none !important;}
+
+@media(min-width:750px){
+  .ao-gift-txt{font-size:12px;}
+  .ao-select{height:36px; font-size:13px;}
+}
+</style>
+
+<script>
+(function(){
+  /* =================== CONFIG =================== */
+  var AMAYA_CFG = {
+    /* handle du bonnet satin offert — à remplir après création du produit.
+       Laisser vide ("") tant qu'il n'existe pas : le cadeau restera un
+       simple encart visuel et rien ne sera ajouté au panier. */
+    giftHandle: "",
+    /* après ajout : "cart" = redirige vers /cart, "drawer" = tente d'ouvrir
+       le tiroir du thème, "stay" = ne fait rien */
+    afterAdd: "cart"
+  };
+  /* ============================================== */
+
+  var root = document.getElementById('amayaOffer');
+  if(!root) return;
+
+  var cta      = root.querySelector('#aoCta');
+  var ctaWas   = root.querySelector('#aoCtaWas');
+  var errBox   = root.querySelector('#aoError');
+  var giftBar  = root.querySelector('#aoGift');
+  var radios   = root.querySelectorAll('input[name="aoPlan"]');
+
+  function qty(){
+    var r = root.querySelector('input[name="aoPlan"]:checked');
+    return r ? parseInt(r.value, 10) : 1;
+  }
+
+  function refresh(){
+    var n = qty();
+    ctaWas.hidden = (n === 1);
+    giftBar.style.display = (n === 2) ? 'flex' : 'none';
+    hideError();
+  }
+
+  function showError(msg){ errBox.textContent = msg; errBox.hidden = false; }
+  function hideError(){ errBox.hidden = true; }
+
+  radios.forEach(function(r){ r.addEventListener('change', refresh); });
+  refresh();
+
+  function selectedItems(){
+    var n = qty();
+    if(n === 1){
+      var first = root.querySelector('.ao-select[data-slot="1"]');
+      /* en standard on suit le sélecteur natif du thème s'il existe */
+      var themeInput = document.querySelector('form[action*="/cart/add"] input[name="id"]');
+      var id = (themeInput && themeInput.value) || (first && first.value);
+      return [{ id: Number(id), quantity: 1 }];
+    }
+    var items = [];
+    root.querySelectorAll('.ao-select').forEach(function(sel){
+      items.push({ id: Number(sel.value), quantity: 1 });
+    });
+    return items;
+  }
+
+  function fetchGiftId(){
+    if(!AMAYA_CFG.giftHandle) return Promise.resolve(null);
+    return fetch('/products/' + AMAYA_CFG.giftHandle + '.js')
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(p){
+        if(!p || !p.variants) return null;
+        var v = p.variants.find(function(x){ return x.available; }) || p.variants[0];
+        return v ? v.id : null;
+      })
+      .catch(function(){ return null; });
+  }
+
+  cta.addEventListener('click', function(){
+    hideError();
+    var items = selectedItems();
+    if(!items.length || items.some(function(i){ return !i.id; })){
+      showError("Sélectionne d'abord tes couleurs.");
+      return;
+    }
+
+    cta.disabled = true;
+    var original = cta.innerHTML;
+    cta.innerHTML = '<span class="ao-cta-main">AJOUT EN COURS…</span>';
+
+    var chain = (qty() === 2) ? fetchGiftId() : Promise.resolve(null);
+
+    chain.then(function(giftId){
+      if(giftId) items.push({ id: giftId, quantity: 1 });
+      return fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ items: items })
+      });
+    })
+    .then(function(res){
+      if(!res.ok) return res.json().then(function(d){ throw new Error(d.description || d.message || 'Erreur'); });
+      return res.json();
+    })
+    .then(function(){
+      if(AMAYA_CFG.afterAdd === 'cart'){ window.location.href = '/cart'; return; }
+      if(AMAYA_CFG.afterAdd === 'drawer'){
+        document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+        var drawer = document.querySelector('cart-drawer, [id*="cart-drawer"], [data-testid="cart-drawer"]');
+        if(drawer && typeof drawer.open === 'function'){ drawer.open(); }
+        else { window.location.href = '/cart'; return; }
+      }
+      cta.disabled = false; cta.innerHTML = original; refresh();
+    })
+    .catch(function(e){
+      cta.disabled = false; cta.innerHTML = original; refresh();
+      showError(e.message || "L'ajout au panier a échoué. Réessaie.");
+    });
+  });
+})();
+</script>
