@@ -1,0 +1,136 @@
+<!--
+  ============================================================
+  EVERHAAR — HERBST HERO (v7 — Herbst-Sale, octobre)
+  ============================================================
+  À ÉDITER :
+  • OFFRE  → "bis zu 40 %" doit matcher la vraie remise (et la barre d'annonce)
+  • PREUVE → "Über 10.000" (vrai chiffre, sinon supprime la ligne .evh-hero__proof)
+  • IMAGES → idéalement uploader les 2 JPG dans Contenu › Fichiers et
+             remplacer les 2 URLs r2.dev par les URLs cdn.shopify.com
+  Coller dans Shopify → Custom Liquid (remplace TOUT l'ancien code).
+  ============================================================
+-->
+<section class="evh-hero">
+
+  <div class="evh-hero__inner">
+    <span class="evh-hero__badge">Nr. 1 Färbeshampoo</span>
+    <h1 class="evh-hero__headline">Herbst-Sale:<br>bis zu 40&nbsp;%</h1>
+    <p class="evh-hero__sub">Graue Haare in 10 Minuten abdecken – ohne Chaos, ohne aggressive Chemie.</p>
+    <a class="evh-hero__cta" href="https://everhaarcare.com/products/everhaar-sofort-farbshampoo">Angebot sichern →</a>
+    <p class="evh-hero__proof"><span class="evh-hero__stars">★★★★★</span> Über 10.000 zufriedene Kunden</p>
+  </div>
+
+  <div class="evh-hero__media">
+    <picture>
+      <source media="(min-width:768px)"
+              srcset="https://pub-aa288d141f824d5a806f4e299bdf822d.r2.dev/images/e0345e5d-a3c2-4abd-b522-66724b117fae.jpg">
+      <img src="https://pub-aa288d141f824d5a806f4e299bdf822d.r2.dev/images/4aa8810e-3b30-4174-91f0-2e809f5c62a2.jpg"
+           alt="EverHaar Herbst-Angebot – sanfte Haarpflege"
+           width="928" height="1152" fetchpriority="high">
+    </picture>
+  </div>
+
+  <div class="evh-hero__scrim"></div>
+
+</section>
+
+<style>
+  /* Supprime l'espace blanc ajouté par le wrapper de section Shopify */
+  .shopify-section:has(.evh-hero),
+  .shopify-section:has(.evh-hero) > *,
+  *:has(> .evh-hero) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .evh-hero {
+    margin: 0;
+    --primary: #465069;
+    --primary-dark: #2E3548;
+    --primary-light: #8B95A8;
+    --neutral-white: #FAFAFA;
+    --accent-gold: #B5733F;     /* cuivre automnal (étoiles) */
+    --text-dark: #1A2030;
+    --cream: #EBE0CE;           /* échantillonné sur le haut de l'image mobile → raccord invisible */
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-family: var(--font);
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .evh-hero__inner { padding: 38px 24px 10px; max-width: 640px; }
+
+  .evh-hero__badge {
+    display: inline-block;
+    border: 1.5px dashed var(--primary-light);
+    border-radius: 999px; padding: 7px 16px;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--primary); margin-bottom: 14px;
+  }
+
+  .evh-hero__headline {
+    font-weight: 800; text-transform: uppercase;
+    font-size: clamp(34px, 9vw, 54px); letter-spacing: -0.5px; line-height: 1.0;
+    color: var(--primary-dark); margin: 0 0 12px;
+  }
+
+  .evh-hero__sub {
+    font-size: 16px; line-height: 1.45; color: var(--text-dark);
+    max-width: 400px; margin: 0 auto 22px;
+  }
+
+  .evh-hero__cta {
+    display: inline-block; background: var(--primary); color: var(--neutral-white);
+    text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 16px 40px; border-radius: 6px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .evh-hero__cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+  .evh-hero__proof { margin: 14px 0 0; font-size: 14px; font-weight: 700; color: var(--text-dark); }
+  .evh-hero__stars { color: var(--accent-gold); letter-spacing: 1px; }
+
+  /* IMAGE : flat-lay complet, avec fondu en haut pour effacer le raccord */
+  .evh-hero__media { position: relative; width: 100%; line-height: 0; font-size: 0; }
+  .evh-hero__media picture { display: block; }
+  .evh-hero__media img { display: block; width: 100%; height: auto; }
+  .evh-hero__media::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 110px; z-index: 1;
+    background: linear-gradient(to bottom, var(--cream) 0%, rgba(235,224,206,0) 100%);
+    pointer-events: none;
+  }
+
+  .evh-hero__scrim { display: none; }
+
+  /* ---------- DESKTOP : overlay texte à gauche ---------- */
+  @media (min-width: 768px) {
+    .evh-hero { position: relative; min-height: 600px; justify-content: center; }
+
+    .evh-hero__media { position: absolute; inset: 0; }
+    .evh-hero__media::before { display: none; }
+    .evh-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
+
+    .evh-hero__scrim {
+      display: block; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to right,
+        rgba(235,224,206,0.92) 0%, rgba(235,224,206,0.75) 32%,
+        rgba(235,224,206,0.15) 55%, rgba(235,224,206,0) 68%);
+    }
+
+    .evh-hero__inner {
+      position: relative; z-index: 2;
+      width: 100%; max-width: 1200px; margin: 0 auto;
+      padding: 64px 56px; text-align: left;
+    }
+    .evh-hero__inner > * { max-width: 480px; }
+    .evh-hero__sub { margin-left: 0; }
+    .evh-hero__headline { font-size: clamp(42px, 4.2vw, 60px); }
+  }
+</style>
